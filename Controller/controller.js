@@ -41,6 +41,26 @@ class Controller {
         let data = Model.uncomplete(uncompleteCommand)
         View.uncomplete(data)
     }
+
+    static createdDate(commandSort) {
+        let data = Model.createdDate(commandSort)
+        View.createdDate(data)
+    }
+
+    static completedDate(commandSort) {
+        let data = Model.completedDate(commandSort)
+        View.completedDate(data)
+    }
+
+    static tag(arrayInput) {
+        let data = Model.tag(arrayInput)
+        View.tag(data)
+    }
+
+    static filter(tags) {
+        let data = Model.filter(tags)
+        View.filter(data)
+    }
 }
 
 module.exports = Controller

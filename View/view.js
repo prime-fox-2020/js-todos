@@ -13,7 +13,7 @@ class View {
 
     static list(dataArr) {
         for (let i = 0; i < dataArr.length; i++) {
-            console.log(`${dataArr[i].id}.  ${dataArr[i].status}  ${dataArr[i].task}`);
+            console.log(`${dataArr[i].id}.  ${dataArr[i].status}  ${dataArr[i].task}`, dataArr[i].created_date);
         }
     }
 
@@ -40,6 +40,26 @@ class View {
         console.log("\n");
         this.list(allData[0]);
     } 
+
+    static createdDate(sortedTodos) {
+        this.list(sortedTodos)
+    }
+
+    static completedDate(sortedTodos) {
+        this.list(sortedTodos)
+    }
+
+    static tag(data) {
+        console.log(data);
+        
+    }
+    
+    static filter(dataArr) {
+        for (let i in dataArr) {
+            console.log(`${dataArr[i].id}.  ${dataArr[i].task}`, dataArr[i].tag);
+            
+        }
+    }
 }
 
 module.exports = View
