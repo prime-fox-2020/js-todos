@@ -1,14 +1,17 @@
 'use-strict'
 const Controller = require('./controller')
-const argv = process.argv[2]
+const [,,route,...argv] = process.argv
 
-// console.log(argv)
+// console.log(route)
 
-switch (argv) {
-  case 'create': Controller.create(); break
-  case 'read': Controller.read(); break
-  case 'update': Controller.update(); break
-  case 'delete': Controller.delete(); break
-  case 'help': Controller.errorCommand(); break
-  default: Controller.errorCommand(); break
+switch (route) {
+  case 'add': Controller.create(argv.join(' ')); break
+  case 'list': Controller.read(); break
+  case 'complete': Controller.complete(Number(argv[0])); break
+  case 'uncomplete': Controller.uncomplete(Number(argv[0])); break
+  case 'delete': Controller.delete(Number(argv[0])); break
+  case 'findById': Controller.findById(Number(argv[0])); break
+  case 'help':
+  case undefined : Controller.help(); break
+  default: Controller.errorCommand(route); break
 }

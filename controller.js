@@ -3,20 +3,36 @@ const View = require('./view')
 
 class Controller {
 
-  static create() {
-    console.log('cret')
+  static create(item) {
+    Model.create(item)
   }
+
   static read() {
-    View.read()
+    Model.read()
   }
-  static update() {
-    console.log('upda')
+
+  static complete(id) {
+    Model.complete(id)
   }
-  static delete() {
-    console.log('dele')
+
+  static uncomplete(id) {
+    Model.uncomplete(id)
   }
-  static errorCommand() {
-    View.errorCommand()
+
+  static delete(id) {
+    Model.delete(id)
+  }
+
+  static findById(id) {
+    Model.findById(id)
+  }
+
+  static help() {
+    View.help()
+  }
+
+  static errorCommand(cmd) {
+    View.errorCommand(cmd)
   }
 }
 

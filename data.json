@@ -1,1 +1,20 @@
-[]
+{
+  "id": 5,
+  "todos": [
+    {
+      "task_id": 1,
+      "task": "makan lagi",
+      "isCompleted": false
+    },
+    {
+      "task_id": 2,
+      "task": "maka sagdhg skdha",
+      "isCompleted": false
+    },
+    {
+      "task_id": 3,
+      "task": "maka sag",
+      "isCompleted": true
+    }
+  ]
+}

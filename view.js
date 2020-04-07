@@ -1,18 +1,28 @@
 class View {
 
-  static create() {
-    console.log('cret')
+  static create(item) {
+    console.log(`Added "${item}" to your TODO list...`)
   }
-  static read() {
-    View.read()
+
+  static read(todos) {
+    todos.forEach(todo => {
+      todo.isCompleted ?
+        console.log(`${todo.task_id}. [x] ${todo.task}`)
+        : console.log(`${todo.task_id}. [ ] ${todo.task}`)
+    })
   }
-  static update() {
-    console.log('upda')
+
+  static findById(todo) {
+    todo.isCompleted ?
+      console.log(`${todo.task_id}. [x] ${todo.task}`)
+      : console.log(`${todo.task_id}. [ ] ${todo.task}`)
   }
-  static delete() {
-    console.log('dele')
+
+  static delete(todo) {
+    console.log(`Deleted "${todo[0].task}" from your TODO list...`)
   }
-  static errorCommand() {
+  
+  static help() {
     console.log('$ node todo.js help')
     console.log('$ node todo.js list')
     console.log('$ node todo.js add <task_content>')
@@ -20,6 +30,10 @@ class View {
     console.log('$ node todo.js delete <task_id>')
     console.log('$ node todo.js complete <task_id>')
     console.log('$ node todo.js uncomplete <task_id>')
+  }
+
+  static errorCommand(cmd) {
+    console.log(`todo.js '${cmd}' is not a todo.js command. Try 'todo.js help'`)
   }
 }
 
