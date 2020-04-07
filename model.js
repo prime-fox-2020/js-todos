@@ -10,7 +10,8 @@ class Model {
   static add(task){
     data.push({
       id : data.length +1,
-      task : task
+      task : task,
+      status : "[ ]"
     })
     fs.writeFileSync('./data.json', JSON.stringify(data, null, 2), 'utf8')
     return data
@@ -34,7 +35,8 @@ class Model {
       if(data[i].id !== +id){
         result.push({
           id : result.length+1,
-          task : data[i].task
+          task : data[i].task,
+          status : data[i].status
         })
       }
     }
@@ -42,7 +44,15 @@ class Model {
     return deleted    
   }
 
-  
+  static complete(id){
+    data[id - 1].status = "[x]";
+    fs.writeFileSync('./data.json', JSON.stringify(data, null, 2), 'utf8');
+  }
+
+  static uncomplete(id){
+    data[id - 1].status = "[ ]";
+    fs.writeFileSync('./data.json', JSON.stringify(data, null, 2), 'utf8');
+  }
 }
 
 module.exports = Model

@@ -1,14 +1,17 @@
 [
   {
     "id": 1,
-    "task": "Bikin aplikasi"
+    "task": "Bikin aplikasi",
+    "status": "[ ]"
   },
   {
     "id": 2,
-    "task": "Main node.js"
+    "task": "Main node.js",
+    "status": "[ ]"
   },
   {
     "id": 3,
-    "task": "shut down my computer"
+    "task": "shut down my computer",
+    "status": "[ ]"
   }
 ]

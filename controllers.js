@@ -26,6 +26,18 @@ class Controllers {
     view.deleteMessage(`Delete "${result}" from your TODO list...`)
     
   }
+
+  static complete (id){
+    let data = model.list()
+    model.complete(id)
+    view.list(data)
+  }
+
+  static uncomplete (id){
+    let data = model.list()
+    model.uncomplete(id)
+    view.list(data)
+  }
 }
 
 module.exports = Controllers
