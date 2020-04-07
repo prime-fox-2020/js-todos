@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": "1",
+    "task": "task1",
+    "status": "Completed",
+    "dateCreated": "2020-04-07T13:24:44.294Z",
+    "dateCompleted": "2020-04-07T16:42:40.191Z",
+    "tags": []
+  },
+  {
+    "id": "2",
+    "task": "task2",
+    "status": "Completed",
+    "dateCreated": "2020-04-07T13:24:51.599Z",
+    "dateCompleted": "2020-04-07T16:42:44.293Z",
+    "tags": []
+  },
+  {
+    "id": "3",
+    "task": "task3",
+    "status": "Uncomplete",
+    "dateCreated": "2020-04-07T13:24:55.500Z",
+    "dateCompleted": "",
+    "tags": []
+  },
+  {
+    "id": "4",
+    "task": "task4",
+    "status": "Completed",
+    "dateCreated": "2020-04-07T13:28:50.109Z",
+    "dateCompleted": "2020-04-07T16:42:50.086Z",
+    "tags": []
+  }
+]
