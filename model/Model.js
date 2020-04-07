@@ -19,8 +19,8 @@ class Model {
     }
 
     static save(data){
+        const fs = require('fs')
         fs.writeFileSync('./data.json',JSON.stringify(data,null,2))
-        
     }
     
     static add(params){
@@ -37,7 +37,7 @@ class Model {
             changeToObj.status = tasks[i].status
             resultData.push(changeToObj)
         }
-
+        this.save(resultData)
     }
     static findById(id){
         let tasks = this.list()
@@ -62,25 +62,19 @@ class Model {
                 x++
             }
         }
-        const fs = require('fs')
-        fs.writeFileSync('./data.json',JSON.stringify(data,null,2))
+        this.save(data)
     }
     static complete(id){
         let tasks = this.list()
         tasks[Number(id)-1].status=true
         
-        const fs = require('fs')
-        fs.writeFileSync('./data.json',JSON.stringify(tasks,null,2))
-    
-        
+        this.save(tasks)
     }
     static uncomplete(id){
         let tasks = this.list()
         tasks[Number(id)-1].status=false
 
-        const fs = require('fs')
-        fs.writeFileSync('./data.json',JSON.stringify(tasks,null,2))
-        
+        this.save(tasks)
     }
 }
 

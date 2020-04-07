@@ -41,8 +41,8 @@ class View {
         console.log(`Task Id number : ${id} has been changed...`)
         
     }
-    static message(){
-        console.log("Tidak ada command seperti itu!!")
+    static message(msg){
+        console.log("Tidak ada command seperti itu!!", msg)
     }
 }
 

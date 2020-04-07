@@ -2,7 +2,7 @@
   {
     "task_id": 1,
     "task": "Belajar Node.js",
-    "status": false
+    "status": true
   },
   {
     "task_id": 2,
@@ -13,10 +13,5 @@
     "task_id": 3,
     "task": "Kerjain",
     "status": true
-  },
-  {
-    "task_id": 4,
-    "task": "Makan,lagi",
-    "status": false
   }
 ]

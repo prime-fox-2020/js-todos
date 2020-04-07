@@ -2,7 +2,7 @@ const Controller = require('./controller/Controller')
 const command = process.argv[2]
 const params = process.argv.slice(3)
 
-switch(command){
+switch(command.split(':')[0]){
     case undefined:
         Controller.help()
         break;
@@ -10,7 +10,7 @@ switch(command){
         Controller.help()
         break;
     case 'list':
-        Controller.list()
+        Controller.list(command.split(':')[0])
         break;
     case 'add':
         Controller.add(params)
@@ -27,8 +27,11 @@ switch(command){
     case 'uncomplete':
         Controller.uncomplete(params)
         break;
+    case 'filter':
+        Controller.filter(params)    
+    break;
     default:
-        Controller.message()
+        Controller.message(command.split(':'))
         break;
 
 }

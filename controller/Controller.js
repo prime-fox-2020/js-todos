@@ -30,8 +30,8 @@ class Controller {
         View.uncomplete(id)
         
     }
-    static message(){
-        View.message()
+    static message(msg){
+        View.message(msg)
     }
 }
 
