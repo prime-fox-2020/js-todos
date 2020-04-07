@@ -2,16 +2,31 @@
   {
     "task_id": 1,
     "task": "Belajar Node.js",
-    "status": true
+    "status": true,
+    "tag": [],
+    "created_at": "2020-04-07T14:31:44.338Z",
+    "completed_at": null
   },
   {
     "task_id": 2,
     "task": "Maen game",
-    "status": false
+    "status": false,
+    "tag": [
+      "hobby",
+      "game"
+    ],
+    "created_at": "2020-04-07T14:31:44.338Z",
+    "completed_at": null
   },
   {
     "task_id": 3,
-    "task": "Kerjain",
-    "status": true
+    "task": "Kerjain tugas",
+    "status": false,
+    "tag": [
+      "hobby",
+      "work"
+    ],
+    "created_at": "2020-04-07T14:31:44.338Z",
+    "completed_at": null
   }
 ]

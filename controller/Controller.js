@@ -5,8 +5,9 @@ class Controller {
     static help() {
         View.help()
     }
-    static list(){
-        let tasks = Model.list()
+    static list(command,params){
+        let tasks = Model.list(command,params)
+        console.log(tasks)
         View.list(tasks)
     }
     static add(params){
@@ -29,6 +30,14 @@ class Controller {
         Model.uncomplete(id)
         View.uncomplete(id)
         
+    }
+    static tags(id,tag){
+        Model.tags(id,tag)
+        View.tags(tag)   
+     }
+    static filter(tag){
+       let filtered= Model.filter(tag)
+        View.list(filtered)   
     }
     static message(msg){
         View.message(msg)

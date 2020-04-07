@@ -1,19 +1,22 @@
 const View = require('../view/View')
 
-class Model {
-    constructor(task_id,task,status){
+class Task {
+    constructor(task_id,task,status,tag,created_at,completed_at){
         this.task_id = task_id
         this.task = task
         this.status =  status
+        this.tag = tag || []
+        this.created_at =created_at || new Date(Date.now())
+        this.completed_at = completed_at || null
     }
 
-    static list(){
+    static list(command,params){
         const fs = require('fs')
         const data = fs.readFileSync('./data.json','utf8')
         const parseData = JSON.parse(data)
         let resultData =[]
         for(let i=0;i<parseData.length;i++){
-            resultData.push(new Model(parseData[i].task_id,parseData[i].task,parseData[i].status))
+            resultData.push(new Task(parseData[i].task_id,parseData[i].task,parseData[i].status,parseData[i].tag,parseData[i].created_at, parseData[i].completed_at))
         }
         return resultData
     }
@@ -26,18 +29,9 @@ class Model {
     static add(params){
         let tasks=this.list()
         let getId = tasks.length+1
-        tasks.push(new Model(getId,params.toString(),false))
+        tasks.push(new Task(getId,params.join(' '),false))
 
-        let resultData = []
-        let changeToObj = {}
-        for(let i=0;i<tasks.length;i++){
-            changeToObj={}
-            changeToObj.task_id = tasks[i].task_id
-            changeToObj.task = tasks[i].task
-            changeToObj.status = tasks[i].status
-            resultData.push(changeToObj)
-        }
-        this.save(resultData)
+        this.save(tasks)
     }
     static findById(id){
         let tasks = this.list()
@@ -76,6 +70,17 @@ class Model {
 
         this.save(tasks)
     }
+    static tags(id,arrayTags){
+        let tasks = this.list()
+        arrayTags.forEach(element => {
+            tasks[Number(id)-1].tag.push(element)
+        });
+        
+        this.save(tasks)
+    }
+    static filter(tags){
+
+    }
 }
 
-module.exports = Model
+module.exports = Task

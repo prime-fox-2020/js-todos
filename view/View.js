@@ -1,5 +1,3 @@
-const Model = require('../model/Model')
-
 class View {
     static help() {
         console.log("node todo.js ")
@@ -11,37 +9,40 @@ class View {
         console.log("node todo.js complete <task_content>")
         console.log("node todo.js uncomplete <task_content>")
     }
-    static list(tasks){
+    static list(tasks) {
         console.log("Your To Do Lists :")
-        for(let i=0;i<tasks.length;i++){
-            if(tasks[i].status==false)
+        for (let i = 0; i < tasks.length; i++) {
+            if (tasks[i].status == false)
                 console.log(`${tasks[i].task_id}. [ ] ${tasks[i].task}`)
             else
                 console.log(`${tasks[i].task_id}. [x] ${tasks[i].task}`)
-            
+
         }
     }
-    static add(params){
+    static add(params) {
         console.log(`Added "${params}" to your To Do List...`)
 
     }
-    static findById(id){
+    static findById(id) {
         // console.log(id)
         console.log(`${id.task_id}. ${id.task}`)
     }
-    static delete(id){
+    static delete(id) {
         console.log(`Task Id number : ${id} has been deleted...`)
 
     }
-    static complete(id){
+    static complete(id) {
         console.log(`Task Id number : ${id} has been changed...`)
-        
+
     }
-    static uncomplete(id){
+    static uncomplete(id) {
         console.log(`Task Id number : ${id} has been changed...`)
-        
+
     }
-    static message(msg){
+    static tags(params) {
+        console.log(params.join(', '))
+    }
+    static message(msg) {
         console.log("Tidak ada command seperti itu!!", msg)
     }
 }
