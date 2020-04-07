@@ -1,1 +1,17 @@
-[]
+[
+    {
+        "id": 1,
+        "todo": "[X]",
+        "task": "tidur siang"
+    },
+    {
+        "id": 2,
+        "todo": "[X]",
+        "task": "mandi"
+    },
+    {
+        "id": 3,
+        "todo": "[ ]",
+        "task": "coding lembur"
+    }
+]
