@@ -13,6 +13,7 @@ const listToDo = () =>{
         let kegiatan = data[i].kegiatan
         view.showTodo(id,kegiatan)
     }
+    return data
 }
 
 const add =(dataTambah) =>{
@@ -20,11 +21,19 @@ const add =(dataTambah) =>{
     view.suksusTambah(dataTambah)
 }
 
+const findById = (id) =>{
+    let data = model.read();
+    findData = data[id].kegiatan
+    view.showTodo(id,findData)
+}
+
 
 
 module.exports= {
     listHelp,
     listToDo,
-    add
-
+    add,
+    findById
 }
+
+// console.log(listToDo())
