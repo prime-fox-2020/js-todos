@@ -11,8 +11,8 @@ class View{
             'node todo.js uncomplete <task_id>',
             'node todo.js list: created asc | desc',
             'node todo.js list: completed asc | desc',
-            'node todo.js tag',
-            'node todo.js filter'
+            'node todo.js tag <task_id> <tag_1>...<tag_n>',
+            'node todo.js filter:<tag>'
         ]
         console.log('Silahkan memilih command berikut:')
         for (let i of helper) {

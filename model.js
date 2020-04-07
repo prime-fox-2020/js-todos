@@ -1,7 +1,7 @@
 let fs = require('fs');
 
 class ToDo{
-    constructor(task_id, task, createdAt, complete = false, tag = [], completedAt = null){
+    constructor(task_id, task, complete = false, tag = [], createdAt, completedAt = null){
         this._task_id = task_id
         this._task = task
         this._complete = complete
@@ -46,19 +46,19 @@ class ToDo{
 
 
     static add(task){
-        let list = ToDo.findAll()
+        let list = this.findAll()
         let id = 1
         let numberOfList = list.length
         if (numberOfList > 0) {
             id = list[numberOfList - 1]._task_id + 1
         }
         list.push(new ToDo(id, task, new Date()))
-        ToDo.writeList(list)
+        this.writeList(list)
     }
 
 
     static findByID(id) {
-        let list = ToDo.findAll()
+        let list = this.findAll()
         for(let i = 0; i < list.length; i++){
             if(list[i].task_id === id){
                 return list[i]
@@ -69,7 +69,7 @@ class ToDo{
 
 
     static delete(id){
-        let list = ToDo.findAll()
+        let list = this.findAll()
         let willBeDeleted = false
         for(let i = 0; i < list.length; i++){
             if(list[i].task_id === id){
@@ -78,42 +78,42 @@ class ToDo{
                 break
             }
         }
-        ToDo.writeList(list)
+        this.writeList(list)
         return willBeDeleted
     }
 
 
     
     static checking(num) {
-        let list = ToDo.findAll()
+        let list = this.findAll()
         let task
         for(let i = 0; i < list.length; i++){
             if (list[i]._task_id === num){ 
                 task = list[i]
             }
         }
-        ToDo.complete = true
+        this.complete = true
         task.completedAt = new Date()
         this.writeList(list)
     }
 
 
     static unchecking(num){
-        let list = ToDo.findAll()
+        let list = this.findAll()
         let task
         for(let i = 0; i < list.length; i++){
             if (list[i].task_id === num){
                 task = list[i]
             } 
         }
-        ToDo.complete = false
+        this.complete = false
         task.completedAt = null
         this.writeList(list)
     }
 
 
     static findComplete(){
-        let list = ToDo.findAll()
+        let list = this.findAll()
         let listComplete = []
         for(let i = 0; i < list.length; i++){
             if (list[i].complete === true){
@@ -126,7 +126,7 @@ class ToDo{
 
 
     static findUncomplete(){
-        let list = ToDo.findAll()
+        let list = this.findAll()
         let listUncomplete = []
         for(let i = 0; i < list.length; i++){
             if (list[i].complete !== true){
@@ -139,7 +139,7 @@ class ToDo{
 
 
     static addTag(id, tag){
-        let list = ToDo.findAll()
+        let list = this.findAll()
         let success = []
         let task
         for(let i = 0; i < list.length; i++){
@@ -164,8 +164,8 @@ class ToDo{
     }
 
 
-    static filtered(value){
-        let list = ToDo.findAll()
+    static filtering(value){
+        let list = this.findAll()
         let filtered = []
         let isExist = false
         for(let x = 0; x < list.length; x++){

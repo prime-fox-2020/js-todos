@@ -1,5 +1,5 @@
-let todo = require('../models');
-let view = require('../views');
+let todo = require('./model')
+let view = require('./view')
 
 class Controller{
 
@@ -14,14 +14,14 @@ class Controller{
     }
 
 
-    static addTask(input) {
-        todo.addTask(input)
+    static addTask(input){
+        todo.add(input)
         view.showMessage(`${input} has been added`)
     }
 
 
     static findById(id){
-        let data = todo.findOne(Number(id));
+        let data = todo.findByID(Number(id));
         if(!data){
             view.showMessage(`ID ${id}: not found`)
         }else{
@@ -96,7 +96,7 @@ class Controller{
 
 
     static filter(tag){
-        let filtered = todo.filtered(tag)
+        let filtered = todo.filtering(tag)
         if (filtered.length === 0){
             view.showMessage(`There is no task with tag ${tag}`)
         }else{
