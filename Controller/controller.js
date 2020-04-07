@@ -15,8 +15,8 @@ class Controller {
         View.message(`Added "${input}" to your todo list...`)
     }
     static findById(input){
-        let found = Model.findById(input)
-        View.findById(found)
+        let find = Model.findById(input)
+        View.findById(find)
     }
     static delete(id){
         Model.delete(id)

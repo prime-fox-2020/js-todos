@@ -51,14 +51,9 @@ class View {
             }
         }
     }
-    // static findById(id){
-    //     console.log(id)
-    //     // for (let i = 0; i < id.length; i++) {
-    //     //     console.log(`${id[i].id}. ${id[i].input}}`);
-            
-    //     // }
-    //     // console.log(`${input.id}. ${input.task}`)
-    // }
+    static findById(input){
+        console.log(`${input.id}. ${input.input}`)
+    }
 }
 
 module.exports = View
