@@ -1,1 +1,19 @@
-[{"task":"workin","condition":"complete"},{"task":"home","condition":"complete"},{"task":"tekan power","condition":"uncomplete"}]
+[
+  {
+    "task": "Bikin aplikasi",
+    "completed": false,
+    "created_date": "2020-04-06",
+    "tag": [
+      "bikin"
+    ]
+  },
+  {
+    "task": "Main Node.js",
+    "completed": true,
+    "created_date": "2020-04-06"
+  },
+  {
+    "task": "Main express",
+    "completed": true
+  }
+]
