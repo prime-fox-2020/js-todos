@@ -1,0 +1,20 @@
+{
+  "name": "js-todos",
+  "version": "1.0.0",
+  "main": "todo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prime-fox-2020/js-todos.git"
+  },
+  "keywords": [],
+  "author": "fahrulnoer <fahrulnoer17@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prime-fox-2020/js-todos/issues"
+  },
+  "homepage": "https://github.com/prime-fox-2020/js-todos#readme",
+  "description": ""
+}

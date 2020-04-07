@@ -1,1 +1,27 @@
-[]
+[
+    {
+        "id": 1,
+        "input": "tidur",
+        "status": true
+    },
+    {
+        "id": 2,
+        "input": "ngoding",
+        "status": false
+    },
+    {
+        "id": 3,
+        "input": "makan",
+        "status": true
+    },
+    {
+        "id": 4,
+        "input": "hidup",
+        "status": false
+    },
+    {
+        "id": 5,
+        "input": "nguli",
+        "status": false
+    }
+]
