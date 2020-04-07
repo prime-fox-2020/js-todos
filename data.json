@@ -1,1 +1,42 @@
-[]
+[
+    {
+      "_id": 1,
+      "task": "Wake up",
+      "status": false,
+      "created_date": "2020-07-14T06:00:00.151Z",
+      "completed": null,
+      "tag": []
+    },
+    {
+      "_id": 2,
+      "task": "Take a bath",
+      "status": false,
+      "created_date": "2020-07-14T06:15:00.151Z",
+      "completed": null,
+      "tag": []
+    },
+    {
+      "_id": 3,
+      "task": "Doing some coding exercise",
+      "status": true,
+      "created_date": "2020-07-14T07:00:00.151Z",
+      "completed": null,
+      "tag": []
+    },
+    {
+      "_id": 4,
+      "task": "Take a break",
+      "status": false,
+      "created_date": "2020-07-14T08:00:00.151Z",
+      "completed": null,
+      "tag": []
+    },
+    {
+      "_id": 5,
+      "task": "Lecture",
+      "status": false,
+      "created_date": "2020-07-14T09:00:00.151Z",
+      "completed": null,
+      "tag": []
+    }
+  ]
