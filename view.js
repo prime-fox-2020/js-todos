@@ -8,7 +8,9 @@ class View {
     console.log('node todo.js findById <task_id>    # Melihat detail TODO sesuai `task_id` nya')
     console.log('node todo.js delete <task_id>      # Menghapus TODO sesuai dengan `task_id` nya')
     console.log('node todo.js complete <task_id>    # Menandai status TODO selesai')
-    console.log('node todo.js uncomplete <task_id>    # Menandai status TODO belum selesai')
+    console.log('node todo.js uncomplete <task_id>  # Menandai status TODO belum selesai')
+    console.log('node todo.js tag <task_id> <tags>  # Menambahkan Tag')
+    console.log('node todo.js filter:<tag>          # Menampilkan daftar TODO berdasarkan tag')
   }
 
   static commandNotFound() {
@@ -35,6 +37,45 @@ class View {
 
   static delete(task) {
     console.log(`Deleted "${task}" from your TODO list`);
+  }
+
+  static sorted(task, par) {
+    // default sort: ascending
+    let sortedTask = task.sort((a,b) => a.created_date - b.created_date);
+    if (par == 'desc') sortedTask = task.sort((a,b) => b.created_date - a.created_date);
+    for (let i = 0; i < sortedTask.length; i++) {
+      console.log(`${sortedTask[i].id}. ${sortedTask[i].status ? '[X]':'[ ]'} ${sortedTask[i].task}`);
+    }
+  }
+
+  static completed(task, par) {
+    // default sort: ascending
+    let complete = task.filter(ta => ta.status == true);
+    let uncomplete = task.filter(ta => ta.status == false);
+    
+    
+    if (par == 'desc') {
+      this.sorted(uncomplete);
+      this.sorted(complete);
+    } else {
+      this.sorted(complete);
+      this.sorted(uncomplete);
+    }
+  }
+
+  static tagAdded(par) {
+    console.log(`Tagged task "${par[0]}" with tags: ${par[1].join(' ')}`);
+  }
+
+  static filterTag(tag, list) {
+    let tagged = list.filter(li => {
+      for (let i = 0; i < li.tags.length; i++) {
+        if (tag == li.tags[i]) return true;
+      }
+    });
+    for (let i = 0; i < tagged.length; i++) {
+      console.log(`${tagged[i].id}. ${tagged[i].task} [${tagged[i].tags.join(', ')}]`);
+    }
   }
 }
 
