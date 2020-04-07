@@ -1,1 +1,32 @@
-[]
+[
+   {
+      "id": 1,
+      "task": "Bikin aplikasi",
+      "status": "[ ]"
+   },
+   {
+      "id": 2,
+      "task": "belajar coding",
+      "status": "[X]"
+   },
+   {
+      "id": 4,
+      "task": "Mandi",
+      "status": "[X]"
+   },
+   {
+      "id": 5,
+      "task": "Masak nasi",
+      "status": "[X]"
+   },
+   {
+      "id": 6,
+      "task": "Main ps",
+      "status": "[ ]"
+   },
+   {
+      "id": 7,
+      "task": "Tidur siang",
+      "status": "[ ]"
+   }
+]
