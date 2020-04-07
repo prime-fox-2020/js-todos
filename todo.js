@@ -31,8 +31,10 @@ switch(argv[0]){
             controler.completeDate(argv[1])
         } ; break
     case `tag`:controler.tag(argv[1],kalimat) ; break
-    default: controler.listHelp(); break 
+    case `filter:`:controler.filterTag(argv[1]) ; break
+    default: controler.listHelp(); break
 
 }
 
-// console.log(argv[0],argv.slice(2),kalimat)
+// untuk filter tag : $ node todo.js filter: kerjaan
+

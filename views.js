@@ -14,6 +14,8 @@ class View{
         $node todo.js uncomplete <task_id>
         $node todo.js list:create
         $node todo.js list:complete
+        $node todo.js tag <task_id> <tag_content>
+        $node todo.js filter: <filter_content>
         `)
     }
 
@@ -41,6 +43,16 @@ class View{
 
     static tag(kegiatan,kalimat){
         console.log(`Tagged task "${kegiatan}" with tags: ${kalimat}`)
+    }
+
+    static filterTag(kegiatanArr,kalimat,data){
+        for (let i = 0; i < kegiatanArr.length; i++) {
+            for (let j = 0; j < data.length; j++) {
+                if(data[j].kegiatan== kegiatanArr[i]){
+                    console.log(`${data[j].id}. ${kegiatanArr[i]} [${data[j].tag}]`)
+                } 
+            }
+        }
     }
     
 }

@@ -156,6 +156,29 @@ const tag = (id,kalimat) =>{
     return data
 }
 
+const filterTag = (kalimat) =>{
+    let data = model.read();
+    let tag =[];
+    let list =[]
+
+    for (let i = 0; i < data.length; i++) {
+        if(tag[i]==undefined){
+            tag[i]=[]
+            tag[i].push(data[i].kegiatan,data[i].tag.split(' '))
+        }
+    }
+
+    for (let i = 0; i < tag.length; i++) {
+        for (let j = 0; j < tag[i][1].length; j++) {
+            if(kalimat == tag[i][1][j]){
+                list.push(tag[i][0])
+            }
+        }
+    }
+
+    view.filterTag(list,kalimat,data)
+}
+
 
 module.exports= {
     listHelp,
@@ -167,5 +190,6 @@ module.exports= {
     uncomplete,
     listCreate,
     completeDate,
-    tag
+    tag,
+    filterTag
 }
