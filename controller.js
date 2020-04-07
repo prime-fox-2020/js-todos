@@ -40,6 +40,10 @@ class Controller {
         Model.tag(id, tags);
         View.tagDone();
     }
+    static filter(tag){
+        let data = Model.filter(tag);
+        View.showList(data);
+    }
 }
 
 module.exports = Controller

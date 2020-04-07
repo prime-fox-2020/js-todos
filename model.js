@@ -155,11 +155,31 @@ class Model {
         for(let a = 0; a < data.length; a++){
             if(data[a].id === id){
                 for(let b = 0; b < tags.length; b++){
-                    data[a].tag.push(tags[b])
+                    data[a].tags.push(tags[b])
                 }
             }
         }
         fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
+    }
+
+    static filter(tag){
+        let data = fs.readFileSync('./data.json', 'utf8');
+        data = JSON.parse(data);
+        let dataList = ''
+        for(let a = 0; a < data.length; a++){
+            for(let b = 0; b < data[a].tags.length; b++){
+                if(data[a].tags[b] === tag){
+                    let checked = ''
+                    if(data[a].status === 'Uncomplete'){
+                        checked = '[]'
+                    } else {
+                        checked = '[v]'
+                    }
+                    dataList += (`${data[b].id}. ${data[b].task} ${checked}\n`)
+                }
+            }
+        }
+        return dataList
     }
 }
 

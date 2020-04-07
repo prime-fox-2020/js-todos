@@ -31,6 +31,10 @@ switch(input[0]){
     break;
     case 'tag':
         Controller.tag(input[1], input.slice(2));
+        console.log(input)
+    break;
+    case 'filter':
+        Controller.filter(input[1]);
     break;
     default :
         Controller.help();
