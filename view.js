@@ -2,11 +2,6 @@ class View{
     static show(data){
         console.log(data)
     }
-    static showListCommon(data){
-        for(let i = 0; i < data.length; i++){
-            console.log(`${data[i].id}. ${data[i].do}`)
-        }
-    }
     static showArray(data){
         for(let i = 0; i < data.length; i++){
             console.log(data[i])
