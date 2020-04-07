@@ -148,6 +148,14 @@ const completeDate = (urut) =>{
 
 }
 
+const tag = (id,kalimat) =>{
+    let data = model.read();
+    data[id-1].tag = kalimat ;
+    model.status(data)
+    view.tag(data[id-1].kegiatan,kalimat)
+    return data
+}
+
 
 module.exports= {
     listHelp,
@@ -158,5 +166,6 @@ module.exports= {
     complete,
     uncomplete,
     listCreate,
-    completeDate
+    completeDate,
+    tag
 }

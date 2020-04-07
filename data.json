@@ -4,27 +4,31 @@
     "kegiatan": "Bikin Aplikasi",
     "status": false,
     "Create_date": 1,
-    "Complete_date": null
+    "Complete_date": null,
+    "tag": "undefined"
   },
   {
     "id": 2,
     "kegiatan": "Main Node js",
     "status": true,
     "Create_date": 2,
-    "Complete_date": 3
+    "Complete_date": 3,
+    "tag": "kehidupan saya "
   },
   {
     "id": 3,
     "kegiatan": "Shut Down My Computer",
     "status": false,
     "Create_date": 5,
-    "Complete_date": null
+    "Complete_date": null,
+    "tag": "undefined"
   },
   {
     "id": 4,
     "kegiatan": "cuci baju",
     "status": true,
     "Creat_date": 7,
-    "Complete_date": 6
+    "Complete_date": 6,
+    "tag": "undefined"
   }
 ]

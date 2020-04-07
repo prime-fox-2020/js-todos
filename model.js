@@ -2,12 +2,15 @@
 const fs =require(`fs`);
 
 class Model{
-    constructor(id,kegiatan,status=false,date= new Date().getDate(), complete = null){
+    constructor(id,kegiatan,status=false,
+        date= new Date().getDate(), complete = null,
+        tag='undifined'){
         this.id =id
         this.kegiatan = kegiatan
         this.status = status
         this.Creat_date = date
         this.Complete_date =complete
+        this.tag = tag
     }
     static read(){
         let data = fs.readFileSync(`./data.json`,`utf8`)
@@ -35,7 +38,7 @@ class Model{
     }
 }
 
-
+undefined
 // console.log(Model.read())
 
 module.exports = Model

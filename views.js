@@ -12,6 +12,8 @@ class View{
         $node todo.js delete <task_id>
         $node todo.js complete <task_id>
         $node todo.js uncomplete <task_id>
+        $node todo.js list:create
+        $node todo.js list:complete
         `)
     }
 
@@ -35,6 +37,10 @@ class View{
             tanda=`[ ]`
         }
         console.log(`${id}. ${tanda} ${keterangan}`)
+    }
+
+    static tag(kegiatan,kalimat){
+        console.log(`Tagged task "${kegiatan}" with tags: ${kalimat}`)
     }
     
 }
