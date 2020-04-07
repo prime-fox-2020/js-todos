@@ -1,1 +1,8 @@
-[]
+[{
+    "id": 1,
+    "kegiatan" : "Bikin Aplikasi"
+  },{
+    "id": 2,
+    "kegiatan" : "Main Node js"
+  }
+]
