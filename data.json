@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 1,
+    "activity": "Bikin Aplikasi",
+    "checklist": false
+  },
+  {
+    "id": 2,
+    "activity": "Main Node.js",
+    "checklist": true
+  },
+  {
+    "id": 3,
+    "activity": "makan siang",
+    "checklist": true
+  },
+  {
+    "id": 4,
+    "activity": "baca buku",
+    "checklist": false
+  }
+]
