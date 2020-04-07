@@ -22,6 +22,15 @@ class View{
             console.log(`${data.id}. ${data.task}`);
         }
     }
+
+    static delete(data){
+        console.log
+        if(typeof data === 'boolean'){
+            console.log('Wrong Id Number!');
+        } else {
+            console.log(`Deleted "${data.task} from your TODO list..."`)
+        }
+    }
 }
 
 module.exports = View

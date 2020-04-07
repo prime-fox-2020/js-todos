@@ -67,7 +67,36 @@ class Model{
     }
 
     static delete(id, cb){
-        
+        this.list((err, data) => {
+            if(err){
+                cb(err, null);
+            }
+            let view = null;
+            let result = [];
+            let flag = false;
+            data.forEach(el => {
+               if(el.id !== Number(id)){
+                   result.push(el);
+                   flag = true;
+               }
+               if(el.id === Number(id)){
+                    view = el;
+               }
+            });
+
+            if(result.length === data.length){
+                flag = false;
+            }
+
+            fs.writeFile('./data.json', JSON.stringify(result, null, 2), (err) => {
+                if(err) throw err;
+                if(flag){
+                    cb(null, view);
+                } else {
+                    cb(null, true);
+                }
+            })
+        })
     }
 }
 

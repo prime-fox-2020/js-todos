@@ -36,7 +36,12 @@ class Controller{
     }
 
     static delete(id){
-        
+        Model.delete(id, (err, data) => {
+            if(err){
+                throw err;
+            }
+            View.delete(data)
+        })
     }
 }
 
