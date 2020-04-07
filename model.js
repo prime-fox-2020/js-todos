@@ -10,15 +10,16 @@ class Model {
     data.todos.push({
       "task_id": data.id,
       "task": item,
-      "isCompleted": false
+      "isCompleted": false,
+      "createdAt": new Date().toString()
     })
     data.id++
     fs.writeFileSync(src, JSON.stringify(data, null, 2))
     View.create(item)
   }
 
-  static read() {
-    View.read(data.todos)
+  static read(sort) {
+    View.read(data.todos, sort)
   }
 
   static findById(id) {

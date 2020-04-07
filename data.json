@@ -3,18 +3,27 @@
   "todos": [
     {
       "task_id": 1,
-      "task": "makan lagi",
-      "isCompleted": false
+      "task": "explore oop",
+      "isCompleted": false,
+      "createdAt": "Tue Apr 07 2020 20:22:45 GMT+0700 (Western Indonesia Time)"
     },
     {
       "task_id": 2,
-      "task": "maka sagdhg skdha",
-      "isCompleted": false
+      "task": "explore es6 method",
+      "isCompleted": false,
+      "createdAt": "Tue Apr 07 2020 21:22:45 GMT+0700 (Western Indonesia Time)"
     },
     {
       "task_id": 3,
-      "task": "maka sag",
-      "isCompleted": true
+      "task": "explore caall back",
+      "isCompleted": true,
+      "createdAt": "Tue Apr 07 2020 22:22:45 GMT+0700 (Western Indonesia Time)"
+    },
+    {
+      "task_id": 4,
+      "task": "kumpul tugas",
+      "isCompleted": false,
+      "createdAt": "Tue Apr 07 2020 23:22:45 GMT+0700 (Western Indonesia Time)"
     }
   ]
 }

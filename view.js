@@ -4,7 +4,7 @@ class View {
     console.log(`Added "${item}" to your TODO list...`)
   }
 
-  static read(todos) {
+  static read(todos, sort) {
     todos.forEach(todo => {
       todo.isCompleted ?
         console.log(`${todo.task_id}. [x] ${todo.task}`)
@@ -21,7 +21,7 @@ class View {
   static delete(todo) {
     console.log(`Deleted "${todo[0].task}" from your TODO list...`)
   }
-  
+
   static help() {
     console.log('$ node todo.js help')
     console.log('$ node todo.js list')

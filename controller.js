@@ -7,8 +7,8 @@ class Controller {
     Model.create(item)
   }
 
-  static read() {
-    Model.read()
+  static read(sort) {
+    Model.read(sort);
   }
 
   static complete(id) {
