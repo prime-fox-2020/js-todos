@@ -14,7 +14,7 @@ class View {
 
     static showData(data) {
         for(let i = 0; i < data.length; i++) {
-            console.log(`${data[i].id}. ${data[i].task}`)
+            console.log(`${data[i].id}. ${data[i].status} ${data[i].task}`)
         }
     }
 

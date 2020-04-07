@@ -1,10 +1,22 @@
 [
     {
         "id": 1,
+        "status": "[ ]",
         "task": "Bikin aplikasi"
     },
     {
         "id": 2,
+        "status": "[ ]",
+        "task": "Main node js"
+    },
+    {
+        "id": 3,
+        "status": "[ ]",
         "task": "Shut down my computer"
+    },
+    {
+        "id": 4,
+        "status": "[ ]",
+        "task": "makan"
     }
 ]

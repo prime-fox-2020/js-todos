@@ -7,6 +7,8 @@ switch(argv[0]) {
     case 'findById' : Controller.findId(argv[1]);break
     case 'add' : Controller.add(argv[1]);break
     case 'delete' : Controller.delete(argv[1]);break
+    case 'complete' : Controller.complete(argv[1]);break
+    case 'uncomplete' : Controller.uncomplete(argv[1]);break
     default : Controller.help();break
 }
 

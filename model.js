@@ -19,6 +19,7 @@ class Model {
     static add(task) {
         data.push({
             id : data.length+1,
+            status : '[ ]',
             task : task
         })
         fs.writeFileSync('./data.json', JSON.stringify(data, null, 4), 'utf-8')
@@ -41,6 +42,16 @@ class Model {
         }
         fs.writeFileSync('./data.json', JSON.stringify(res, null, 4), 'utf-8')
         return deleted
+    }
+
+    static complete(id) {
+        data[id-1].status = '[X]'
+        return data
+    }
+
+    static uncomplete(id) {
+        data[id-1].status = '[ ]'
+        return data
     }
 
 }

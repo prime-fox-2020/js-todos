@@ -26,6 +26,18 @@ class Controller {
         View.successMsg(`Deleted ${res} from your TODO list`)
     }
 
+    static complete(id) {
+        Model.complete(id)
+        let data = Model.list()
+        View.showData(data)
+    }
+
+    static uncomplete(id) {
+        Model.uncomplete(id)
+        let data = Model.list()
+        View.showData(data)
+    }
+
 }
 
 module.exports = Controller
