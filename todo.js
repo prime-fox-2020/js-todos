@@ -20,8 +20,8 @@ switch(command){
     case 'delete':
         Controller.delete(params[0]);
         break;
-    case 'status':
-        Controller.status(params[0], params[1]);
+    case `${command === 'complete' ? 'complete' : 'uncomplete'}` :
+        Controller.status(command, params[0]);
         break;
     default :
         Controller.help();

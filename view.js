@@ -1,5 +1,3 @@
-const Controller = require('./controller');
-
 class View{
     static help(list){
         console.log(list);
@@ -7,18 +5,20 @@ class View{
 
     static list(data){
         console.log('=-=-=-LIST OF TASKS-=-=-=')
-        console.log(data)
+        data.forEach(el => {
+            console.log(`${el.id}. [${el.status === 'complete' ? 'X' : ' '}] ${el.task}`);
+        });
     }
 
     static add(data){
-        console.log(`Added "${data}" to your TODO list...`)
+        console.log(`Added "${data}" to your TODO list...`);
     }
 
     static findById(data){
         if(typeof data === 'boolean'){
             console.log('Wrong Id Number!');
         } else {
-            console.log('Your searching id is:')
+            console.log('Your searching id is:');
             console.log(`${data.id}. ${data.task}`);
         }
     }
@@ -28,9 +28,9 @@ class View{
         if(typeof data === 'boolean'){
             console.log('Wrong Id Number!');
         } else {
-            console.log(`Deleted "${data.task} from your TODO list..."`)
+            console.log(`Deleted "${data.task} from your TODO list..."`);
         }
     }
 }
 
-module.exports = View
+module.exports = View;

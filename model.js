@@ -32,7 +32,7 @@ class Model{
             data.push({
                 id: data[data.length - 1].id + 1,
                 task: newTask,
-                status: 'Incomplete'
+                status: 'Uncomplete'
             });
 
             fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
@@ -95,6 +95,25 @@ class Model{
                 } else {
                     cb(null, true);
                 }
+            })
+        })
+    }
+
+    static status(command, id, cb){
+        this.list((err, data) => {
+            if(err){
+                cb(err, null);
+            }
+
+            data.forEach(el => {
+                if(el.id === Number(id)){
+                    el.status = command;
+                }
+            });
+
+            fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
+                if(err) throw err;
+                cb(null, data)
             })
         })
     }

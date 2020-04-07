@@ -43,6 +43,15 @@ class Controller{
             View.delete(data)
         })
     }
+
+    static status(command, id){
+        Model.status(command, id, (err, data) => {
+            if(err){
+                throw err;
+            }
+            View.list(data)
+        })
+    }
 }
 
 module.exports = Controller;
