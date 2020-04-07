@@ -26,17 +26,21 @@ class Model {
     }
 
     static delete(id) {
+        let deleted = []
+        deleted.push(data[id-1].task)
         let res = []
-        console.log(res)
-        res.push(data[id-1])
         for(let i = 0; i < data.length; i++) {
+            let check = false
             if(data[i].id == id) {
+                check = true
+            }
+            if(!check) {
+                data[i].id = res.length+1
                 res.push(data[i])
-                delete data[i]
             }
         }
-        fs.writeFileSync('./data.json', JSON.stringify(data, null, 4), 'utf-8')
-        return res
+        fs.writeFileSync('./data.json', JSON.stringify(res, null, 4), 'utf-8')
+        return deleted
     }
 
 }

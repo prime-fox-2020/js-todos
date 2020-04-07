@@ -23,7 +23,7 @@ class Controller {
 
     static delete(id) {
         let res = Model.delete(id)
-        View.successMsg(`Deleted ${res.task} from your TODO list`)
+        View.successMsg(`Deleted ${res} from your TODO list`)
     }
 
 }
