@@ -10,6 +10,24 @@ class Model {
         this.tag = tag || []
     }
 
+    static help() {
+        let list = [
+            '$ node todo.js',
+            '$ node todo.js help',
+            '$ node todo.js list',
+            '$ node todo.js list:created asc|desc',
+            '$ node todo.js list:completed asc|desc',
+            '$ node todo.js add <task_content>',
+            '$ node todo.js findById <task_id>',
+            '$ node todo.js delete <task_id>',
+            '$ node todo.js complete <task_id>',
+            '$ node todo.js uncomplete <task_id>',
+            '$ node todo.js tag <task_id> <task_name_1> <task_name_1> .... <task_name_N>',
+            '$ node todo.js filter <task_name>'
+        ]
+        return list
+    }
+
     static list() {
         let data = fs.readFileSync('./data.json', 'utf-8')
         data = JSON.parse(data)
@@ -119,7 +137,7 @@ class Model {
 
     static tag(cmd) {
         let id = cmd[0]
-        let tag = cmd
+        let tag = cmd.slice(1)
         let data = this.list()
         let dataTag
         data.forEach(el => {

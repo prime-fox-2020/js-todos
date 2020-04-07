@@ -1,5 +1,11 @@
 class View {
 
+    static help(list){
+        list.forEach(el => {
+            console.log(el);
+        });
+    }
+
     static list(data) {
         console.log('List To Do : ');
         data.forEach(el => {
@@ -20,10 +26,10 @@ class View {
     }
 
     static tag(data) {
-        console.log(`Tagged task "${data.task}" with tags: ${data.task.join(' ')}`);
+        console.log(`Tagged task "${data.task}" with tags: ${data.tag}`);
     }
 
-    static filter(data){
+    static filter(data) {
         data.forEach(el => {
             console.log(el.id, el.task, el.tag);
         });

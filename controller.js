@@ -3,6 +3,11 @@ const Model = require('./model')
 
 class Controller {
 
+    static help() {
+        let data = Model.help()
+        View.help(data)
+    }
+
     static list() {
         let data = Model.list()
         View.list(data)

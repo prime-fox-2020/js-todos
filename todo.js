@@ -5,18 +5,7 @@ const cmd = process.argv.slice(3)
 
 switch (argv) {
     case 'help':
-        console.log('$ node todo.js');
-        console.log('$ node todo.js help');
-        console.log('$ node todo.js list');
-        console.log('$ node todo.js list:created asc|desc');
-        console.log('$ node todo.js list:completed asc|desc');
-        console.log('$ node todo.js add <task_content>');
-        console.log('$ node todo.js findById <task_id>');
-        console.log('$ node todo.js delete <task_id>');
-        console.log('$ node todo.js complete <task_id>');
-        console.log('$ node todo.js uncomplete <task_id>');
-        console.log('$ node todo.js tag <task_id> <task_name_1> <task_name_1> .... <task_name_N>');
-        console.log('$ node todo.js filter <task_name>');
+        Controller.help()
         break;
     case 'list':
         Controller.list()
