@@ -6,7 +6,7 @@ class View {
     static list(data) {
         console.log('List To Do : ');
         data.forEach(el => {
-            console.log(`${el.id} ${el.todo} ${el.task} ${el.tag}`);
+            console.log(el.id, el.todo, el.task, el.tag);
         });
     }
 
@@ -28,7 +28,7 @@ class View {
 
     static filter(data){
         data.forEach(el => {
-            console.log(`${el.id} ${el.task} ${el.tag}`);
+            console.log(el.id, el.task, el.tag);
         });
     }
 }
