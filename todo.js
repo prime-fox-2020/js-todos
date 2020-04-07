@@ -27,6 +27,11 @@ switch(command) {
     case 'add':
         Controller.add(datas)
         break
+    case 'list:complete':
+        Controller.listcomplete(datas)
+        break
+    case 'tag':
+        Controller.tag(datas)
     // default:
     //     Controller.msg()
     //     break

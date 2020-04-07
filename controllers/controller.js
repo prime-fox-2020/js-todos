@@ -39,6 +39,16 @@ class Controller{
         Todo.add(datas)
         View.add(datas)
     }
+
+    static listcomplete(data){
+        let datas = Todo.liscomplete(data)
+        View.listcomplete(datas)
+    }
+
+    static tag(id, tag) {
+        Todo.tag(id, tag)
+        View.tag(tag)
+    }
     // static msg() {
     //     View.msg()
     // }

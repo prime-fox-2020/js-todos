@@ -2,22 +2,38 @@
   {
     "task_id": 1,
     "task": "todo #",
-    "status": true
+    "status": true,
+    "tag" : [
+      "hobby",
+      "eat"
+    ]
   },
   {
     "task_id": 2,
     "task": "todo help",
-    "status": false
+    "status": false,
+    "tag" : [
+      "hobby", 
+      "eat"
+    ]
   },
   {
     "task_id": 3,
     "task": "todo list",
-    "status": true
+    "status": true,
+    "tag" : [
+      "hobby", 
+      "eat"
+    ]
   },
   {
     "task_id": 4,
     "task": "todo add",
-    "status": false
+    "status": false,
+    "tag" : [
+      "hobby", 
+      "sleep"
+    ]
   },
   {
     "task_id": 5,

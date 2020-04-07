@@ -45,6 +45,17 @@ class View{
     static add(data) {
         console.log(`Added ${data} to your TODO list`)
     }
+
+    static listcomplete(data) {
+        console.log(`here we go :`)
+        for(let i=0; i<data.length; i++){
+            console.log(`${data[i].task_id} [X] ${data[i].task}`)
+        }
+    }
+
+    static tag(datas) {
+        console.log(datas.join(', '))
+    }
     // static msg() {
     //     console.log('kamu siapa?')
     // }

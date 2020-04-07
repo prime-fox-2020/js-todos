@@ -1,10 +1,11 @@
 const fs = require('fs')
 
 class Todo{
-    constructor(task_id, task, status){
+    constructor(task_id, task, status, tag){
         this.task_id = task_id
         this.task = task
         this.status = status
+        this.tag = []
     }
 
     static list() {
@@ -16,7 +17,8 @@ class Todo{
             result.push(new Todo(
                 parsData[i].task_id,
                 parsData[i].task,
-                parsData[i].status))
+                parsData[i].status,
+                parsData[i].tag))
         }
         //console.log(result)
         return result
@@ -74,6 +76,24 @@ class Todo{
         return listData
     }
 
+    static liscomplete(data) {
+        let listData = this.list()
+        let result = []
+
+        for(let i=0; i<listData.length; i++) {
+            if(listData[i].status === true){
+                result.push(listData[i])
+            }
+        }
+        return result
+    }
+
+    static createdate(sort) {
+        let listData = this.list()
+
+    }
+
+  
 }
 
 module.exports = Todo
