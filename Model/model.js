@@ -27,7 +27,7 @@ class Todo {
     static add(input){
         let datas = this.showList()
         let getId = datas.length + 1
-        datas.push(new Todo(getId, input.toString(), this.status, new Date(), this.tags))
+        datas.push(new Todo(getId, input.toString(), this.status, new Date()))
 
         let result = []
         for(let i = 0; i < datas.length; i++){
