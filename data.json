@@ -5,53 +5,50 @@
     "tag": [
       "pekerjaan"
     ],
-    "status": "incomplete",
+    "status": "complete",
     "timeStamp": 1586270588635
   },
   {
     "id": 2,
     "task": "Tidur",
     "tag": [
-      "kebutuhan",
-      "pekerjaan",
-      "hobi"
+      "kebutuhan"
     ],
-    "status": "complete",
+    "status": "incomplete",
     "timeStamp": 1586270987534
   },
   {
     "id": 3,
     "task": "Makan lagi",
-    "tag": [],
+    "tag": [
+      "hobi"
+    ],
     "status": "complete",
     "timeStamp": 1586271763191
   },
   {
     "id": 4,
-    "task": "Jual semangka",
-    "tag": [
-      "pekerjaan",
-      "kebutuhan"
-    ],
-    "status": "incomplete",
-    "timeStamp": 1586272316467
-  },
-  {
-    "id": 5,
     "task": "Makan pisang",
     "tag": [
       "kebutuhan"
     ],
-    "status": "incomplete",
+    "status": "complete",
     "timeStamp": 1586272670578
   },
   {
-    "id": 6,
+    "id": 5,
     "task": "Olahraga",
     "tag": [
       "hobi"
     ],
     "status": "incomplete",
     "timeStamp": 1586272749379
+  },
+  {
+    "id": 6,
+    "task": "Ngoding",
+    "tag": [],
+    "status": "incomplete",
+    "timeStamp": 1586276607545
   }
 ]
