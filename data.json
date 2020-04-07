@@ -4,39 +4,15 @@
     "task": "Bikin aplikasi",
     "status": "[ ]",
     "created_date": "2020-1-1",
-    "tag": "work",
-    "completed_date": ""
+    "completed_date": "",
+    "tag": "fun work"
   },
   {
     "id": 2,
     "task": "Main node.js",
-    "status": "[ ]",
-    "created_date": "2020-1-1",
-    "tag": "work",
-    "completed_date": ""
-  },
-  {
-    "id": 3,
-    "task": "shut down my computer",
     "status": "[x]",
-    "created_date": "2020-1-1",
-    "tag": "work",
-    "completed_date": "2020-1-1"
-  },
-  {
-    "id": 4,
-    "task": "belajar sulap",
-    "status": "[x]",
-    "created_date": "2020-1-1",
-    "tag": "fun",
-    "completed_date": "2020-4-8"
-  },
-  {
-    "id": 5,
-    "task": "lulus Hacktiv8",
-    "status": "[x]",
-    "created_date": "2020-4-8",
-    "tag": "",
-    "completed_date": "2020-4-8"
+    "created_date": "2019-1-1",
+    "completed_date": "2020-4-8",
+    "tag": "work"
   }
 ]

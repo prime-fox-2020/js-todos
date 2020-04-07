@@ -48,6 +48,17 @@ class Controllers {
     let result = model.listCompleted(sort)
     view.dateCompleted(result)
   }
+
+  static tag(id, tags){
+    model.addTag(id , tags)
+    let task = model.findTask(id)
+    view.listData(`Task "${task}" has been tag with: ${tags}`)
+  }
+
+  static filter(tag){
+    let data = model.filter(tag)
+    view.filter(data)
+  }
 }
 
 module.exports = Controllers

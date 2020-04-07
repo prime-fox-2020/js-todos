@@ -14,7 +14,8 @@ class Model {
       task : task,
       status : "[ ]",
       created_date : date,
-      completed_date : ''
+      completed_date : '',
+      tag : ''
     })
     fs.writeFileSync('./data.json', JSON.stringify(data, null, 2), 'utf8')
     return data
@@ -41,7 +42,8 @@ class Model {
           task : data[i].task,
           status : data[i].status,
           created_date : data[i].created_date,
-          completed_date : data[i].completed_date
+          completed_date : data[i].completed_date,
+          tag : data[i]. tag
         })
       }
     }
@@ -96,6 +98,38 @@ class Model {
     }
     return completed
   }
+
+  static findTask(id){
+    let res 
+    for(let i = 0; i < data.length; i++){
+      if(data[i].id === id){
+        res = data[i].task
+        break
+      }
+    }
+    return res
+  }
+
+  static addTag(id, tags){
+    for(let i = 0; i < data.length; i++){
+      if(data[i].id === id){
+        data[i].tag = tags
+        break
+      }
+    }
+    fs.writeFileSync('./data.json', JSON.stringify(data, null, 2))
+  }
+
+  static filter(tag){
+    let res = []
+    for(let i = 0; i < data.length; i++){
+        if(data[i].tag.includes(tag)){
+          res.push(`${data[i].id}. ${data[i].task} [${data[i].tag}]`)
+      }
+    }
+    return res
+  }
 }
+
 
 module.exports = Model
