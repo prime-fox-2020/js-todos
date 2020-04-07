@@ -38,6 +38,16 @@ class Controllers {
     model.uncomplete(id)
     view.list(data)
   }
+
+  static listCreated (sort){
+    let result = model.listCreated(sort)
+    view.dateCreated(result)
+  }
+
+  static listCompleted (sort){
+    let result = model.listCompleted(sort)
+    view.dateCompleted(result)
+  }
 }
 
 module.exports = Controllers
