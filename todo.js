@@ -17,6 +17,14 @@ switch(argv[0]){
         }else{
             controler.listCreate(argv[1])
         } ; break
+
+    case `list:complete`:
+        if(argv[1]==`desc`){
+            controler.completeDate(argv[1])
+        }else{
+            controler.completeDate(argv[1])
+        } ; break
+    
     default: controler.listHelp(); break 
 
 }

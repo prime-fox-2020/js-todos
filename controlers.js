@@ -101,6 +101,53 @@ const listCreate = (urut) => {
     return data
 } 
 
+const completeDate = (urut) =>{
+
+    let data = model.read();
+    if(urut ==`desc`){
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j < data.length-1; j++) {
+                if(data[j].Complete_date == null){
+                    data[j].Complete_date = 99
+                }
+                if(data[j].Complete_date == null){
+                    data[j+1].Complete_date = 99
+                }
+
+                if(data[j].Complete_date < data[j+1].Complete_date){
+                    let temp = data[j]
+                    data[j]= data[j+1]
+                    data[j+1]=temp
+                }
+            }
+        }
+    }else{
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j < data.length-1; j++) {
+                if(data[j].Complete_date == null){
+                    data[j].Complete_date = 99
+                }
+                if(data[j].Complete_date == null){
+                    data[j+1].Complete_date = 99
+                }
+
+                if(data[j].Complete_date > data[j+1].Complete_date){
+                    let temp = data[j]
+                    data[j] = data[j+1]
+                    data[j+1]=temp
+                }
+            }
+        }
+    }
+
+    for (let i = 0; i < data.length; i++) {
+        view.status(i+1,data[i].status,data[i].kegiatan)
+    }
+
+    return data
+
+}
+
 
 module.exports= {
     listHelp,
@@ -110,5 +157,6 @@ module.exports= {
     hapus,
     complete,
     uncomplete,
-    listCreate
+    listCreate,
+    completeDate
 }

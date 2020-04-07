@@ -3,24 +3,28 @@
     "id": 1,
     "kegiatan": "Bikin Aplikasi",
     "status": false,
-    "Create_date": 12
+    "Create_date": 1,
+    "Complete_date": null
   },
   {
     "id": 2,
     "kegiatan": "Main Node js",
     "status": true,
-    "Create_date": 20
+    "Create_date": 2,
+    "Complete_date": 3
   },
   {
     "id": 3,
     "kegiatan": "Shut Down My Computer",
     "status": false,
-    "Create_date": 15
+    "Create_date": 5,
+    "Complete_date": null
   },
   {
     "id": 4,
     "kegiatan": "cuci baju",
-    "status": false,
-    "Creat_date": 7
+    "status": true,
+    "Creat_date": 7,
+    "Complete_date": 6
   }
 ]
