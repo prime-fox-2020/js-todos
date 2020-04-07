@@ -8,13 +8,29 @@ class Controller{
         })
     }
 
-    static list(){
-        Model.list((err, data) => {
-            if(err){
-                throw err;
-            }
-            View.list(data);
-        })
+    static list(command){
+        if(command === 'list:created'){
+            Model.listCreated((err, data) => {
+                if(err) {
+                    throw err;
+                }
+                View.list(data);
+            })
+        } else if (command === 'list:completed'){
+            Model.listCompleted((err, data) => {
+                if(err) {
+                    throw err;
+                }
+                View.list(data);
+            })
+        } else {
+            Model.list((err, data) => {
+                if(err){
+                    throw err;
+                }
+                View.list(data);
+            })
+        }
     }
 
     static add(newTask){
@@ -31,7 +47,7 @@ class Controller{
             if(err){
                 throw err;
             }
-            View.findById(data)
+            View.findById(data);
         })
     }
 
@@ -40,7 +56,7 @@ class Controller{
             if(err){
                 throw err;
             }
-            View.delete(data)
+            View.delete(data);
         })
     }
 
@@ -49,7 +65,16 @@ class Controller{
             if(err){
                 throw err;
             }
-            View.list(data)
+            View.list(data);
+        })
+    }
+
+    static tag(id, tag){
+        Model.tag(id, tag, (err, data) => {
+            if(err){
+                throw err;
+            }
+            View.tag(data, tag);
         })
     }
 }

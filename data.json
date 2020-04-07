@@ -2,21 +2,40 @@
   {
     "id": 1,
     "task": ":besoklivecode:",
-    "status": "uncomplete"
+    "status": "uncomplete",
+    "createdAt": "2020-04-07T10:19:53.495Z",
+    "tags": [
+      "belajar ulud",
+      "belajar ulud lagi"
+    ]
   },
   {
     "id": 2,
     "task": "Main node.js",
-    "status": "uncomplete"
+    "status": "uncomplete",
+    "createdAt": "2020-04-07T10:19:42.913Z",
+    "tags": [
+      "cobain ulud"
+    ]
   },
   {
     "id": 3,
     "task": "Main",
-    "status": "complete"
+    "status": "complete",
+    "createdAt": "2020-04-07T10:20:09.679Z",
+    "tags": []
   },
   {
     "id": 4,
     "task": "rebahan",
-    "status": "uncomplete"
+    "status": "uncomplete",
+    "createdAt": "2020-04-07T10:20:05.601Z",
+    "tags": []
+  },
+  {
+    "id": 5,
+    "status": "uncomplete",
+    "createdAt": "2020-04-07T10:54:12.509Z",
+    "tags": []
   }
 ]

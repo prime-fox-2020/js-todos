@@ -4,7 +4,7 @@ class Model{
     static help(cb){
         let node = 'node todo.js';
 
-        cb('=-=-=-=-=-LIST OF COMMANDS-=-=-=-=-=')
+        cb('=-=-=-=-=-LIST OF COMMANDS-=-=-=-=-=');
         cb(node + ' help (show list of commands)');
         cb(node + ' list (show list of todo)');
         cb(node + ' add <task_content> (adding some task)');
@@ -24,6 +24,41 @@ class Model{
         })
     }
 
+    static listCreated(cb){
+        this.list((err, data) => {
+            if(err) {
+                cb(err, null);
+            }
+            for (let i = 0; i < data.length; i++) {
+                for (let j = i + 1; j < data.length; j++) {
+                    if(data[i].createdAt > data[j].createdAt){
+                        let swap = data[j];
+                        data[j] = data[i];
+                        data[i] = swap;
+                    }
+                }
+            }
+            cb(null, data);
+        })
+    }
+
+    static listCompleted(cb){
+        this.list((err, data) => {
+            if(err){
+                cb (err, null);
+            }
+            let result = [];
+            
+            data.forEach(el => {
+                if(el.status === 'complete'){
+                    result.push(el);
+                }
+            });
+
+            cb(null, result);
+        })
+    }
+
     static add(newTask, cb){
         this.list((err, data) => {
             if(err){
@@ -32,7 +67,8 @@ class Model{
             data.push({
                 id: data[data.length - 1].id + 1,
                 task: newTask,
-                status: 'Uncomplete'
+                status: 'uncomplete',
+                createdAt: new Date()
             });
 
             fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
@@ -114,6 +150,27 @@ class Model{
             fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
                 if(err) throw err;
                 cb(null, data)
+            })
+        })
+    }
+
+    static tag(id, tag, cb){
+        this.list((err, data) => {
+            if(err){
+                cb(err, null);
+            }
+            let result = null;
+
+            data.forEach(el => {
+                if(el.id === Number(id)){
+                    el.tags.push(tag);
+                    result = el;
+                }
+            });
+
+            fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
+                if(err) throw err;
+                cb(null, result)
             })
         })
     }
