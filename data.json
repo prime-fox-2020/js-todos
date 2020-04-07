@@ -1,17 +1,21 @@
 [
     {
         "id": 1,
-        "todo": "[X]",
-        "task": "tidur siang"
+        "todo": "[ ]",
+        "task": "makan malam",
+        "created_date": "2020-04-07T13:13:55.120Z",
+        "completed_date": "",
+        "tag": []
     },
     {
         "id": 2,
         "todo": "[X]",
-        "task": "mandi"
-    },
-    {
-        "id": 3,
-        "todo": "[ ]",
-        "task": "coding lembur"
+        "task": "tidur",
+        "created_date": "2020-04-07T13:14:04.518Z",
+        "completed_date": "2020-04-07T13:14:29.605Z",
+        "tag": [
+            "mimpi",
+            "nyenyak"
+        ]
     }
 ]

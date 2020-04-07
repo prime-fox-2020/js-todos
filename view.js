@@ -6,7 +6,7 @@ class View {
     static list(data) {
         console.log('List To Do : ');
         data.forEach(el => {
-            console.log(`${el.id} ${el.todo} ${el.task} `);
+            console.log(`${el.id} ${el.todo} ${el.task} ${el.tag}`);
         });
     }
 
@@ -20,6 +20,16 @@ class View {
 
     static delete(data) {
         console.log(`Deleted "${data.task}" to your TODO list...`);
+    }
+
+    static tag(data) {
+        console.log(`Tagged task "${data.task}" with tags: ${data.task.join(' ')}`);
+    }
+
+    static filter(data){
+        data.forEach(el => {
+            console.log(`${el.id} ${el.task} ${el.tag}`);
+        });
     }
 }
 

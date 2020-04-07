@@ -35,6 +35,26 @@ class Controller {
         let data = Model.uncomplete(id)
         View.list(data)
     }
+
+    static created_date(sort) {
+        let data = Model.created_date(sort)
+        View.list(data)
+    }
+
+    static completed_date(sort) {
+        let data = Model.completed_date(sort)
+        View.list(data)
+    }
+
+    static tag(cmd) {
+        let data = Model.tag(cmd)
+        View.tag(data)
+    }
+
+    static filter(cmd) {
+        let data = Model.filter(cmd)
+        View.filter(data)
+    }
 }
 
 module.exports = Controller
