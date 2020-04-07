@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "Makan",
+    "status": "incomplete"
+  },
+  {
+    "id": 2,
+    "task": "Kerjain Tugas",
+    "status": "incomplete"
+  },
+  {
+    "id": 3,
+    "task": "Mandi",
+    "status": "incomplete"
+  },
+  {
+    "id": 4,
+    "task": "Cuci Baju",
+    "status": "incomplete"
+  }
+]

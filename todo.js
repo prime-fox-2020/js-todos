@@ -1,7 +1,15 @@
 const Controller = require('./controller');
 
 const command = process.argv[2];
+const argument = process.argv[3];
 switch(command) {
-    case undefined: case 'help': Controller.to_do_commands(); break;
-    default: ;
+    case undefined :
+    case 'help': Controller.showCommandsList(); break;
+    case 'list' : Controller.displayToDoList(); break;
+    case 'add' : Controller.addToDoList(argument); break;
+    case 'findById' : Controller.findID(argument); break;
+    case 'delete' : Controller.deleteTask(argument); break;
+    case 'complete' : Controller.completeTask(argument); break;
+    case 'uncomplete' : Controller.uncompleteTask(argument); break;
+    default: Controller.wrongCommand();
 }
