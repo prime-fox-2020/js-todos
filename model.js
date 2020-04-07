@@ -2,9 +2,10 @@
 const fs =require(`fs`);
 
 class Model{
-    constructor(id,kegiatan){
+    constructor(id,kegiatan,status=false){
         this.id =id
         this.kegiatan = kegiatan
+        this.status = status
     }
     static read(){
         let data = fs.readFileSync(`./data.json`,`utf8`)
@@ -22,6 +23,11 @@ class Model{
     }
 
     static hapus(dataBaru){
+        fs.writeFileSync(`./data.json`,JSON.stringify(dataBaru,null,2),`utf8`)
+        return dataBaru
+    }
+
+    static status(dataBaru){
         fs.writeFileSync(`./data.json`,JSON.stringify(dataBaru,null,2),`utf8`)
         return dataBaru
     }

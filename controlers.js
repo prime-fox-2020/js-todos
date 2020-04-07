@@ -39,9 +39,35 @@ const hapus = (id) =>{
         }
     }
     model.hapus(newData)
-
     view.suksesDelete(dataDelete)
     return newData
+}
+
+const complete = (id) =>{
+    let data = model.read();
+    if(data[id-1].status == false){
+        data[id-1].status = true
+    }
+    model.status(data)
+
+    for (let i = 0; i < data.length; i++) {
+        view.status(i+1,data[i].status,data[i].kegiatan)
+    }
+
+    return data
+}
+
+const uncomplete = (id) =>{
+    let data = model.read();
+    if(data[id-1].status == true){
+        data[id-1].status = false
+    }
+    model.status(data)
+    for (let i = 0; i < data.length; i++) {
+        view.status(i+1,data[i].status,data[i].kegiatan)
+    }
+    
+    return data
 }
 
 
@@ -50,7 +76,7 @@ module.exports= {
     listToDo,
     add,
     findById,
-    hapus
+    hapus,
+    complete,
+    uncomplete
 }
-
-// console.log(hapus(2))

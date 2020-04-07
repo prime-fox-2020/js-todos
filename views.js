@@ -26,6 +26,16 @@ class View{
     static suksesDelete(dataDelete){
         console.log(` Deleted "${dataDelete}" from your TODO list...`)
     }
+
+    static status(id,status,keterangan){
+        let tanda=`[ ]`
+        if(status){
+            tanda=`[X]`
+        }else{
+            tanda=`[ ]`
+        }
+        console.log(`${id}. ${tanda} ${keterangan}`)
+    }
     
 }
 

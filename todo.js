@@ -9,8 +9,8 @@ switch(argv[0]){
     case `add`: ; controler.add(argv[1]); break
     case `findById`:controler.findById(argv[1]) ; break
     case `delete`: controler.hapus(argv[1]) ; break
-    case `complete`: ; break
-    case `uncomplte`: ; break
+    case `complete`:controler.complete(argv[1]) ; break
+    case `uncomplete`:controler.uncomplete(argv[1]) ; break
     default: controler.listHelp(); break 
 
 }

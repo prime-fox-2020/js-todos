@@ -1,14 +1,17 @@
 [
-    {
-      "id": 1,
-      "kegiatan": "Bikin Aplikasi"
-    },
-    {
-      "id": 2,
-      "kegiatan": "Main Node js"
-    },
-    {
-      "id": 3,
-      "kegiatan": "Shut Down My Computer"
-    }
-  ]
+  {
+    "id": 1,
+    "kegiatan": "Bikin Aplikasi",
+    "status": false
+  },
+  {
+    "id": 2,
+    "kegiatan": "Main Node js",
+    "status": true
+  },
+  {
+    "id": 3,
+    "kegiatan": "Shut Down My Computer",
+    "status": false
+  }
+]
