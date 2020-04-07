@@ -1,30 +1,3 @@
-// class View {
-    
-//     // static showHelp(){
-        // console.log(`
-        // $ node todo.js
-        // $ node todo.js help
-        // $ node todo.js list
-        // $ node todo.js add <task_content>
-        // $ node todo.js findById <task_id>
-        // $ node todo.js delete <task_id>
-        // $ node todo.js complete <task_id>
-        // $ node todo.js uncomplete <task_id>
-        // `)
-//     // }
-
-    
-//     static showList (list){
-//         for (let i = 0; i < list.length; i++) {
-//             if (list[i].status == false) {
-//                 console.log(`${list[i].id}. [ ] ${list[i].input}`)
-//             } else {
-//                 console.log(`${list[i].id}. [x] ${list[i].input}`)
-//             }
-//         }
-//     }
-// }
-
 class View {
     static message(message){
         console.log(message);
@@ -40,6 +13,9 @@ class View {
         $ node todo.js delete <task_id>
         $ node todo.js complete <task_id>
         $ node todo.js uncomplete <task_id>
+        $ node todo.js list:outstanding asc | desc
+        $ node todo.js tag <task_id> <tag_name_1> <tag_name_2> ... <tag_name_N>
+        $ node todo.js filter:<tag_name>
         `)
     }
     static showList(list){
