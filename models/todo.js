@@ -88,11 +88,6 @@ class Todo{
         return result
     }
 
-    static createdate(sort) {
-        let listData = this.list()
-
-    }
-
   
 }
 
