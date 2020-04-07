@@ -12,8 +12,7 @@ switch(command){
         Controller.list();
         break;
     case 'add':
-        console.log(params);
-        Controller.add(params);
+        Controller.add(params[0]);
         break;
     case 'findById':
         Controller.findById(params);

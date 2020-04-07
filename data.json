@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "Buka Aplikasi",
+    "status": "Incomplete"
+  },
+  {
+    "id": 2,
+    "task": "Main node.js",
+    "status": "Incomplete"
+  },
+  {
+    "id": 3,
+    "task": "Main",
+    "status": "Completed"
+  },
+  {
+    "id": 4,
+    "task": "rebahan",
+    "status": "Incomplete"
+  }
+]
