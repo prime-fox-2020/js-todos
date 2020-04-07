@@ -17,5 +17,13 @@
             "mimpi",
             "nyenyak"
         ]
+    },
+    {
+        "id": 3,
+        "todo": "[X]",
+        "task": "to do list",
+        "created_date": "2020-04-07T15:07:07.987Z",
+        "completed_date": "2020-04-07T15:07:44.500Z",
+        "tag": []
     }
 ]

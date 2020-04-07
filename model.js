@@ -1,13 +1,13 @@
 const fs = require('fs')
 
 class Model {
-    constructor(id, todo, task, created_date, completed_date = '', tag = []) {
-        this.id = id,
-            this.todo = todo,
-            this.task = task,
-            this.created_date = new Date(created_date),
-            this.completed_date = completed_date,
-            this.tag = tag
+    constructor(id, todo, task, created_date, completed_date, tag) {
+        this.id = id
+        this.todo = todo
+        this.task = task
+        this.created_date = new Date(created_date)
+        this.completed_date = '' || new Date(completed_date)
+        this.tag = tag || []
     }
 
     static list() {
@@ -101,15 +101,16 @@ class Model {
         let data = this.list()
         let dataCompleted = []
         data.forEach(el => {
-            if (el.completed_date != '') {
+            if (el.todo == '[X]') {
                 dataCompleted.push(el)
             }
         });
+        console.log('dataCompleted: ', dataCompleted);
         let newData
         if (sort == 'asc') {
-            newData = dataCompleted.sort((a, b) => a.completed_date - b.completed_date)
+            newData = dataCompleted.sort((a, b) => new Date(a.completed_date) - new Date(b.completed_date))
         } else if (sort == 'desc') {
-            newData = dataCompleted.sort((a, b) => b.completed_date - a.completed_date)
+            newData = dataCompleted.sort((a, b) => new Date(b.completed_date) - new Date(a.completed_date))
         } else {
             newData = dataCompleted
         }

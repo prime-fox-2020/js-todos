@@ -2,9 +2,6 @@ const View = require('./view')
 const Model = require('./model')
 
 class Controller {
-    constructor(params) {
-
-    }
 
     static list() {
         let data = Model.list()

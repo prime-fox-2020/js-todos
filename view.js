@@ -1,7 +1,4 @@
 class View {
-    constructor(params) {
-
-    }
 
     static list(data) {
         console.log('List To Do : ');
