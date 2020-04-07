@@ -24,6 +24,10 @@ class View {
         console.log("$ node todo.js delete <task_id> # Menghapus To-Do sesuai 'task_id'-nya");
         console.log("$ node todo.js complete <task_id> # Menandai status To-Do selesai");
         console.log("$ node todo.js uncomplete <task_id> # Menandai status To-Do belum selesai");
+        console.log("$ node todo.js list:created asc|desc");
+        console.log("$ node todo.js list:completed asc|desc");
+        console.log("$ node todo.js tag <task_id> <tag_name1> <tag_name_2> ... <tag_name_N");
+        console.log("$ node todo.js filter:<tag_name>");
     }
 
     static wrongCommand() {

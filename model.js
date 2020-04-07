@@ -12,7 +12,7 @@ class Model {
 
     static addToDoList(newTask) {
         let taskList = this.readToDoList();
-        taskList.push({id: taskList.length+1, task: newTask, status: 'incomplete'});
+        taskList.push({id: taskList.length+1, task: newTask, status: 'incomplete', timeStamp: Date.now()});
         this.writeToDoList(taskList);
     }
 

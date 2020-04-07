@@ -45,6 +45,16 @@ class Controller {
         View.toDoList(taskList);
     }
 
+    static sortByTime(order = 'asc'){
+        const taskList = Model.readToDoList();
+        if (order == 'asc') {
+            taskList.sort((a, b) => (a.timeStamp > b.timeStamp) ? 1 : -1);
+        } else if (order == 'desc') {
+            taskList.sort((a, b) => (a.timeStamp < b.timeStamp) ? 1 : -1);
+        }
+        View.toDoList(taskList);
+    }
+
     static showCommandsList() {
         View.commandsList();
     }

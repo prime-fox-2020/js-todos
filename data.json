@@ -1,22 +1,20 @@
 [
   {
     "id": 1,
-    "task": "Makan",
-    "status": "incomplete"
+    "task": "Lembur tugas hacktiv8",
+    "status": "incomplete",
+    "timeStamp": 1586270588635
   },
   {
     "id": 2,
-    "task": "Kerjain Tugas",
-    "status": "incomplete"
+    "task": "Tidur",
+    "status": "incomplete",
+    "timeStamp": 1586270987534
   },
   {
     "id": 3,
-    "task": "Mandi",
-    "status": "incomplete"
-  },
-  {
-    "id": 4,
-    "task": "Cuci Baju",
-    "status": "incomplete"
+    "task": "Makan lagi",
+    "status": "incomplete",
+    "timeStamp": 1586271763191
   }
 ]

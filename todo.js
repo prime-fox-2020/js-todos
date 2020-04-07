@@ -1,7 +1,7 @@
 const Controller = require('./controller');
 
 const command = process.argv[2];
-const argument = process.argv[3];
+let argument = process.argv[3];
 switch(command) {
     case undefined :
     case 'help': Controller.showCommandsList(); break;
@@ -11,5 +11,6 @@ switch(command) {
     case 'delete' : Controller.deleteTask(argument); break;
     case 'complete' : Controller.completeTask(argument); break;
     case 'uncomplete' : Controller.uncompleteTask(argument); break;
+    case 'list:created' : Controller.sortByTime(argument); break;
     default: Controller.wrongCommand();
 }
