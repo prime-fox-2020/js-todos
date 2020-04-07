@@ -2,16 +2,25 @@
   {
     "id": 1,
     "kegiatan": "Bikin Aplikasi",
-    "status": false
+    "status": false,
+    "Create_date": 12
   },
   {
     "id": 2,
     "kegiatan": "Main Node js",
-    "status": true
+    "status": true,
+    "Create_date": 20
   },
   {
     "id": 3,
     "kegiatan": "Shut Down My Computer",
-    "status": false
+    "status": false,
+    "Create_date": 15
+  },
+  {
+    "id": 4,
+    "kegiatan": "cuci baju",
+    "status": false,
+    "Creat_date": 7
   }
 ]

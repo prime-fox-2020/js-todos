@@ -2,10 +2,11 @@
 const fs =require(`fs`);
 
 class Model{
-    constructor(id,kegiatan,status=false){
+    constructor(id,kegiatan,status=false,date= new Date().getDate()){
         this.id =id
         this.kegiatan = kegiatan
         this.status = status
+        this.Creat_date = date
     }
     static read(){
         let data = fs.readFileSync(`./data.json`,`utf8`)

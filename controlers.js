@@ -70,6 +70,37 @@ const uncomplete = (id) =>{
     return data
 }
 
+const listCreate = (urut) => {
+    let data = model.read();
+    if(urut ==`desc`){
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j < data.length-1; j++) {
+                if(data[j].Create_date < data[j+1].Create_date){
+                    let temp = data[j]
+                    data[j]= data[j+1]
+                    data[j+1]=temp
+                }
+            }
+        }
+    }else{
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j < data.length-1; j++) {
+                if(data[j].Create_date > data[j+1].Create_date){
+                    let temp = data[j]
+                    data[j] = data[j+1]
+                    data[j+1]=temp
+                }
+            }
+        }
+    }
+
+    for (let i = 0; i < data.length; i++) {
+        view.status(i+1,data[i].status,data[i].kegiatan)
+    }
+
+    return data
+} 
+
 
 module.exports= {
     listHelp,
@@ -78,5 +109,6 @@ module.exports= {
     findById,
     hapus,
     complete,
-    uncomplete
+    uncomplete,
+    listCreate
 }
