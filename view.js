@@ -11,6 +11,7 @@ class View{
     }
 
     static list(arr){
+        // console.log(arr)
         for (let key of arr) {
             console.log(`${key.Id}. ${key.task}`)
         }

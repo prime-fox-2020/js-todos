@@ -5,8 +5,8 @@ class Controller {
     static help(){
         View.help()
     }
-    static list(){
-        let result = Model.list()
+    static list(perintah, tambahan){
+        let result = Model.list(perintah, tambahan)
         View.list(result)
     }
     static add(str){
@@ -26,6 +26,10 @@ class Controller {
         View.complete(x)
     }
     static uncomplete(num){
+        let unX = Model.uncomplete(num)
+        View.complete(unX)
+    }
+    static sort(num){
         let unX = Model.uncomplete(num)
         View.complete(unX)
     }

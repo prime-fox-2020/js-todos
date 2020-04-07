@@ -4,8 +4,31 @@ const data = fs.readFileSync("./data.json", "utf8")
 const parsed = JSON.parse(data)
 const stringi = JSON.stringify(parsed)
 class Model {
-    static list() {
-        return parsed
+    static list(perintah = "created", tambahan = "asc") {
+        let arr = []
+        if(perintah == "created"){
+            if(tambahan == "asc"){
+                return parsed
+            }else if(tambahan == "desc"){
+                return parsed.reverse()
+            }
+        }else if(perintah == "completed"){
+            if(tambahan == "asc"){
+                for(let com of parsed){
+                    if(com.complete){
+                        arr.push(com)
+                    }
+                }
+                return arr
+            }else if(tambahan == "desc"){
+                for(let com of parsed){
+                    if(com.complete){
+                        arr.push(com)
+                    }
+                }
+                return arr.reverse()
+            }
+        }
     }
     static add(str){
         let obj = {"Id" : parsed.length+1,
