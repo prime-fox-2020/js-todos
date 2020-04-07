@@ -18,6 +18,10 @@ class View{
     static showTodo(id,kegiatan){
         console.log(`${id}. ${kegiatan}`)
     }
+
+    static suksusTambah(dataTambah){
+        console.log(` added ${dataTambah} to your TODO list...`)
+    }
 }
 
 module.exports = View

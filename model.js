@@ -2,12 +2,24 @@
 const fs =require(`fs`);
 
 class Model{
+    constructor(id,kegiatan){
+        this.id =id
+        this.kegiatan = kegiatan
+    }
     static read(){
         let data = fs.readFileSync(`./data.json`,`utf8`)
         data =JSON.parse(data)
         
         return data
-    }   
+    }
+    
+    static create(dataTambah){
+        let data = Model.read()
+        let result = new Model(data.length+1,dataTambah)
+        data.push(result)
+        fs.writeFileSync(`./data.json`,JSON.stringify(data,null,2),`utf8`)
+        return result
+    }
 }
 
 

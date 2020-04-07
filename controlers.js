@@ -13,13 +13,18 @@ const listToDo = () =>{
         let kegiatan = data[i].kegiatan
         view.showTodo(id,kegiatan)
     }
+}
 
+const add =(dataTambah) =>{
+    model.create(dataTambah)
+    view.suksusTambah(dataTambah)
 }
 
 
 
 module.exports= {
     listHelp,
-    listToDo
+    listToDo,
+    add
 
 }
