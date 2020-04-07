@@ -27,13 +27,30 @@ const findById = (id) =>{
     view.showTodo(id,findData)
 }
 
+const hapus = (id) =>{
+    let data = model.read();
+    let dataDelete = data[id-1].kegiatan
+    let newData =[]
+    let count = 0
+    for (let i = 0; i < data.length; i++) {
+        if(Number(id) -1 != i){
+            count ++
+            newData.push(new model(count, data[i].kegiatan))
+        }
+    }
+    model.hapus(newData)
+
+    view.suksesDelete(dataDelete)
+    return newData
+}
 
 
 module.exports= {
     listHelp,
     listToDo,
     add,
-    findById
+    findById,
+    hapus
 }
 
-// console.log(listToDo())
+// console.log(hapus(2))

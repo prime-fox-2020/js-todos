@@ -22,6 +22,11 @@ class View{
     static suksusTambah(dataTambah){
         console.log(` added ${dataTambah} to your TODO list...`)
     }
+
+    static suksesDelete(dataDelete){
+        console.log(` Deleted "${dataDelete}" from your TODO list...`)
+    }
+    
 }
 
 module.exports = View

@@ -20,6 +20,11 @@ class Model{
         fs.writeFileSync(`./data.json`,JSON.stringify(data,null,2),`utf8`)
         return result
     }
+
+    static hapus(dataBaru){
+        fs.writeFileSync(`./data.json`,JSON.stringify(dataBaru,null,2),`utf8`)
+        return dataBaru
+    }
 }
 
 

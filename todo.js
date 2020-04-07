@@ -8,7 +8,7 @@ switch(argv[0]){
     case `list`: controler.listToDo() ; break
     case `add`: ; controler.add(argv[1]); break
     case `findById`:controler.findById(argv[1]) ; break
-    case `delete`: ; break
+    case `delete`: controler.hapus(argv[1]) ; break
     case `complete`: ; break
     case `uncomplte`: ; break
     default: controler.listHelp(); break 
