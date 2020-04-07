@@ -1,58 +1,66 @@
 [
     {
         "ID": 1,
-        "nama": "Jason",
-        "task": "Membuat laporan",
-        "status": "Uncomplete",
+        "nama": "Reza",
+        "task": "Mengerjakan tugas",
+        "status": "Incomplete",
         "category": "important",
         "createdDate": "2020-03-10T16:35:24.916Z"
     },
     {
         "ID": 2,
-        "nama": "Jason",
-        "task": "Membuat laporan",
-        "status": "Uncomplete",
+        "nama": "Reza",
+        "task": "Bermain game",
+        "status": "Incomplete",
         "category": "important",
         "createdDate": "2020-03-10T16:35:24.916Z"
     },
     {
         "ID": 3,
-        "nama": "Jason",
+        "nama": "Reza",
         "task": "Membuat laporan",
-        "status": "Uncomplete",
+        "status": "Incomplete",
         "category": "important",
         "createdDate": "2020-03-10T16:35:24.916Z"
     },
     {
         "ID": 4,
-        "nama": "Jason",
+        "nama": "Reza",
         "task": "Membuat laporan",
-        "status": "Uncomplete",
+        "status": "Incomplete",
         "category": "important",
         "createdDate": "2020-03-10T16:35:24.916Z"
     },
     {
         "ID": 5,
-        "nama": "jason",
+        "nama": "Reza",
         "task": "ngapainkek",
-        "status": "Unimportant",
+        "status": "Completed",
         "category": "Unimportant",
         "createdDate": "2020-03-11T12:55:25.106Z"
     },
     {
-        "ID": 6,
-        "nama": "jason",
-        "task": "ngapainkek",
-        "status": "Unimportant",
-        "category": "Unimportant",
-        "createdDate": "2020-03-11T12:55:59.344Z"
-    },
-    {
         "ID": 7,
-        "nama": "jason",
+        "nama": "Reza",
         "task": "ngapainkek",
-        "status": "penting",
+        "status": "Incomplete",
         "category": "Unimportant",
         "createdDate": "2020-03-11T12:56:44.337Z"
+    },
+    {
+        "ID": 8,
+        "nama": "Reza",
+        "task": "Belajar",
+        "status": "Incomplete",
+        "category": "Unimportant",
+        "createdDate": "2020-04-07T22:18:17.506Z"
+    },
+    {
+        "ID": 9,
+        "nama": "Reza",
+        "task": "Main game",
+        "status": "Incomplete",
+        "category": "Unimportant",
+        "createdDate": "2020-04-07T22:19:11.652Z"
     }
 ]
