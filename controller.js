@@ -38,6 +38,25 @@ class Controller {
         View.showData(data)
     }
 
+    static sortByDate(opr) {
+        let data = Model.sortByDate(opr)
+        View.showData(data)
+    }
+
+    static listCompleted(opr) {
+        let data = Model.listCompleted(opr)
+        View.showData(data)
+    }
+
+    static addTag(id, tag) {
+        let data = Model.addTag(id, tag)
+        View.successMsg(`Tagged task ${data[0].task} with tags: ${data[0].tag}`)
+    }
+
+    static filter(opr) {
+        let data = Model.filter(opr)
+        View.filter(data)
+    }
 }
 
 module.exports = Controller
