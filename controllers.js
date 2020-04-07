@@ -20,6 +20,12 @@ class Controllers {
     let result = model.findById(id)
     view.list(result)
   }
+
+  static delete (id){
+    let result = model.delete(id)
+    view.deleteMessage(`Delete "${result}" from your TODO list...`)
+    
+  }
 }
 
 module.exports = Controllers

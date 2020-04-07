@@ -23,7 +23,9 @@ class View {
     console.log(msg)
   }
 
-  
+  static deleteMessage(msg){
+    console.log(msg)
+  }
 }
 
 module.exports = View
