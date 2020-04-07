@@ -17,7 +17,15 @@ class Task {
     }
     static list() {
         for (let i = 0; i < dataParsed.length; i++) {
-            console.log(`${i + 1}: ${dataParsed[i].task}`);
+            // console.log(`${i + 1}: ${dataParsed[i].task}`);
+            let cond = ''
+            if (dataParsed[i].condition === 'uncomplete') {
+                cond = ' '
+            }
+            else if (dataParsed[i].condition === 'complete') {
+                cond = 'X'
+            }
+            console.log(`${i + 1}.[${cond}] ${dataParsed[i].task}`);
         }
     }
     static add(input) {
@@ -41,12 +49,26 @@ class Task {
         let stringfied = JSON.stringify(dataParsed)
         fs.writeFileSync('data.json', stringfied, 'utf8')
     }
+    static uncomplete(input) {
+        let numbered = Number(input)
+        dataParsed[numbered - 1].condition = 'uncomplete'
+
+        let stringfied = JSON.stringify(dataParsed)
+        fs.writeFileSync('data.json', stringfied, 'utf8')
+        Task.list()
+    }
+    static complete(input) {
+        let numbered = Number(input)
+        dataParsed[numbered - 1].condition = 'complete'
+
+        let stringfied = JSON.stringify(dataParsed)
+        fs.writeFileSync('data.json', stringfied, 'utf8')
+        Task.list()
+    }
 }
-// Menjalankan Method Task Help
-if (process.argv[2] === undefined) {
-    console.log('Ketik "node todo.js help"!');
-}
-else if (process.argv[2] === 'help') {
+
+// Menjalankan Method Task
+if (process.argv[2] === 'help' || process.argv[2] === undefined) {
     Task.help()
 }
 else if (process.argv[2] === 'list') {
@@ -60,6 +82,12 @@ else if (process.argv[2] === 'findByid') {
 }
 else if (process.argv[2] === 'delete') {
     Task.delete(process.argv[3])
+}
+else if (process.argv[2] === 'complete') {
+    Task.complete(process.argv[3])
+}
+else if (process.argv[2] === 'uncomplete') {
+    Task.uncomplete(process.argv[3])
 }
 else {
     console.log('Command yang dimasukan salah!');

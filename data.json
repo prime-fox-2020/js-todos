@@ -1,1 +1,1 @@
-[{"task":"workin"},{"task":"home"},{"task":"tekan power"}]
+[{"task":"workin","condition":"complete"},{"task":"home","condition":"complete"},{"task":"tekan power","condition":"uncomplete"}]
