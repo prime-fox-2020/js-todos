@@ -1,20 +1,26 @@
 [
   {
+    "id": 4,
+    "task": "Jual semangka",
+    "status": "incomplete",
+    "timeStamp": 1586272316467
+  },
+  {
     "id": 1,
     "task": "Lembur tugas hacktiv8",
     "status": "incomplete",
     "timeStamp": 1586270588635
   },
   {
-    "id": 2,
-    "task": "Tidur",
-    "status": "incomplete",
-    "timeStamp": 1586270987534
-  },
-  {
     "id": 3,
     "task": "Makan lagi",
-    "status": "incomplete",
+    "status": "complete",
     "timeStamp": 1586271763191
+  },
+  {
+    "id": 2,
+    "task": "Tidur",
+    "status": "complete",
+    "timeStamp": 1586270987534
   }
 ]

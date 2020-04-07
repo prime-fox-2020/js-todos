@@ -41,18 +41,29 @@ class Controller {
             }
         }
         Model.writeToDoList(taskList);
-
         View.toDoList(taskList);
     }
 
     static sortByTime(order = 'asc'){
         const taskList = Model.readToDoList();
         if (order == 'asc') {
-            taskList.sort((a, b) => (a.timeStamp > b.timeStamp) ? 1 : -1);
-        } else if (order == 'desc') {
             taskList.sort((a, b) => (a.timeStamp < b.timeStamp) ? 1 : -1);
+        } else if (order == 'desc') {
+            taskList.sort((a, b) => (a.timeStamp > b.timeStamp) ? 1 : -1);
         }
         View.toDoList(taskList);
+        Model.writeToDoList(taskList);
+    }
+
+    static sortCompletedTask(order = 'asc'){
+        const taskList = Model.readToDoList();
+        if (order == 'asc') {
+            taskList.sort((a, b) => (a.status > b.status) ? 1 : -1);
+        } else if (order == 'desc') {
+            taskList.sort((a, b) => (a.status < b.status) ? 1 : -1);
+        }
+        View.toDoList(taskList);
+        Model.writeToDoList(taskList);
     }
 
     static showCommandsList() {

@@ -12,5 +12,7 @@ switch(command) {
     case 'complete' : Controller.completeTask(argument); break;
     case 'uncomplete' : Controller.uncompleteTask(argument); break;
     case 'list:created' : Controller.sortByTime(argument); break;
+    case 'list:completed' : Controller.sortCompletedTask(argument); break;
+    // case 'list:uncompleted' : Controller.sortUncompletedTask(); break;
     default: Controller.wrongCommand();
 }
