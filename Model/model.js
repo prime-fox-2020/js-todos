@@ -1,11 +1,12 @@
 const fs = require('fs')
 
 class Todo {
-    constructor(id, input, status = false, createdAt, tag = []){
+    constructor(id, input, status = false, createdAt, completed_date = '', tag = []){
         this.id = id
         this.input = input
         this.status =  status
         this.createdAt = new Date(createdAt)
+        this.completed_date = completed_date
         this.tag = tag
     }
 
@@ -13,7 +14,7 @@ class Todo {
         const datas = JSON.parse(fs.readFileSync('./data.json','utf8'))
         let result =[]
         for(let i = 0; i < datas.length; i++){
-            result.push(new Todo(datas[i].id, datas[i].input, datas[i].status, datas[i].createdAt, datas[i].tag))
+            result.push(new Todo(datas[i].id, datas[i].input, datas[i].status, datas[i].createdAt, datas[i].completed_date, datas[i].tag))
         }
         return result
     }
@@ -36,6 +37,7 @@ class Todo {
             obj.input = datas[i].input
             obj.status = datas[i].status
             obj.createdAt = datas[i].createdAt
+            obj.completed_date = datas[i].completed_date
             obj.tag = datas[i].tag
             result.push(obj)
         }
@@ -61,6 +63,9 @@ class Todo {
                 obj.id = datas[i].id
                 obj.input = datas[i].input
                 obj.status = datas[i].status
+                obj.createdAt = datas[i].createdAt
+                obj.completed_date = datas[i].completed_date
+                obj.tag = datas[i].tag
                 data.push(obj)
             }
         }
@@ -69,7 +74,8 @@ class Todo {
 
     static complete(id){
         let datas = this.showList()
-        datas [Number(id) - 1].status = true
+        datas[Number(id) - 1].status = true
+        datas[Number(id) - 1].completed_date = new Date()
         this.save(datas)
     }
 
@@ -88,6 +94,25 @@ class Todo {
             newData = datas.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
         } else {
             newData = datas
+        }
+        return newData
+    }
+
+    static completed_date(sort){
+        let datas = this.showList()
+        let complete = []
+        for (let i = 0; i < datas.length; i++) {
+            if (datas[i].status === true) {
+                complete.push(datas[i])
+            }
+        }
+        let newData;
+        if (sort == 'asc') {
+            newData = complete.sort((a,b) => new Date(a.completed_date) - new Date(b.completed_date))
+        } else if (sort == 'desc') {
+            newData = complete.sort((a,b) => new Date(b.completed_date) - new Date(a.completed_date))
+        } else {
+            newData = complete
         }
         return newData
     }

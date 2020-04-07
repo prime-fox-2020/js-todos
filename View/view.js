@@ -39,6 +39,13 @@ class View {
             }
         }
     }
+    static completed_date(sort){
+        for (let i = 0; i < sort.length; i++) {
+            if(sort[i].status === true) {
+                console.log(`${sort[i].id}. [x] ${sort[i].input}`)
+            }
+        }
+    }
     static filter(data){
         for (let i = 0; i < data.length; i++) {
             console.log(`${data[i].id}. ${data[i].input} [${data[i].tag}]`);

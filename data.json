@@ -1,40 +1,26 @@
 [
     {
         "id": 1,
-        "input": "maen",
+        "input": "makan",
         "status": false,
-        "createdAt": "2020-04-07T15:29:19.211Z",
-        "tag": [
-            "routine",
-            "seharian"
-        ]
+        "createdAt": "2020-04-07T16:27:38.019Z",
+        "completed_date": "",
+        "tag": []
     },
     {
         "id": 2,
         "input": "ngoding",
-        "status": false,
-        "createdAt": "2020-04-07T15:29:24.909Z",
+        "status": true,
+        "createdAt": "2020-04-07T16:27:42.137Z",
+        "completed_date": "2020-04-07T16:29:17.724Z",
         "tag": []
     },
     {
         "id": 3,
-        "input": "makan",
-        "status": false,
-        "createdAt": "2020-04-07T15:29:29.993Z",
-        "tag": []
-    },
-    {
-        "id": 4,
-        "input": "tidur",
-        "status": false,
-        "createdAt": "2020-04-07T16:03:02.790Z",
-        "tag": []
-    },
-    {
-        "id": 5,
-        "input": "tidur",
-        "status": false,
-        "createdAt": "2020-04-07T16:04:11.040Z",
+        "input": "main",
+        "status": true,
+        "createdAt": "2020-04-07T16:27:46.839Z",
+        "completed_date": "2020-04-07T16:29:20.669Z",
         "tag": []
     }
 ]

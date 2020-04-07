@@ -12,6 +12,9 @@ switch(command){
     case 'list:outstanding':
         Controller.createdAt(input)
         break;
+    case 'list:completed':
+        Controller.completed_date(input)
+        break;
     case 'add':
         Controller.add(input)
         break;

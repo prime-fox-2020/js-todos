@@ -34,6 +34,10 @@ class Controller {
         let tasks = Model.createdAt(sort)
         View.createdAt(tasks)
     }
+    static completed_date(sort){
+        let tasks = Model.completed_date(sort)
+        View.completed_date(tasks)
+    }
     static tags(id, tag){
         Model.tags(id, tag)
         View.message(`Tagged task id number "${id}" with tags: ${tag}`)
