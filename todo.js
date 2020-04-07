@@ -9,6 +9,9 @@ switch(command){
     case 'list':
         Controller.showList(command)
         break;
+    case 'list:outstanding':
+        Controller.createdAt(input)
+        break;
     case 'add':
         Controller.add(input)
         break;
@@ -24,6 +27,9 @@ switch(command){
     case 'uncomplete':
         Controller.uncomplete(input)
         break;
+    case 'tag':
+        Controller.tags(input[0], input.slice(1))
+    break
     case 'filter':
         Controller.filter(input)    
     break;

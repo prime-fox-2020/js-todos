@@ -54,6 +54,20 @@ class View {
     static findById(input){
         console.log(`${input.id}. ${input.input}`)
     }
+    static createdAt(sort){
+        for (let i = 0; i < sort.length; i++) {
+            if(sort[i].status === false) {
+                console.log(`${sort[i].id}. [ ] ${sort[i].input}`)
+            }else {
+                console.log(`${sort[i].id}. [x] ${sort[i].input}`)
+            }
+        }
+    }
+    static filter(data){
+        for (let i = 0; i < data.length; i++) {
+            console.log(`${data[i].id}. ${data[i].input} [${data[i].tag}]`);
+        }
+    }
 }
 
 module.exports = View

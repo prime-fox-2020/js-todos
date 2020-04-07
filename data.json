@@ -1,27 +1,26 @@
 [
     {
         "id": 1,
-        "input": "tidur",
-        "status": true
+        "input": "maen",
+        "status": false,
+        "createdAt": "2020-04-07T15:29:19.211Z",
+        "tag": [
+            "routine",
+            "seharian"
+        ]
     },
     {
         "id": 2,
         "input": "ngoding",
-        "status": false
+        "status": false,
+        "createdAt": "2020-04-07T15:29:24.909Z",
+        "tag": []
     },
     {
         "id": 3,
         "input": "makan",
-        "status": true
-    },
-    {
-        "id": 4,
-        "input": "hidup",
-        "status": false
-    },
-    {
-        "id": 5,
-        "input": "nguli",
-        "status": false
+        "status": false,
+        "createdAt": "2020-04-07T15:29:29.993Z",
+        "tag": []
     }
 ]

@@ -30,6 +30,18 @@ class Controller {
         Model.uncomplete(id)
         View.message(`Task id number : ${id} has been changed`)        
     }
+    static createdAt(sort){
+        let tasks = Model.createdAt(sort)
+        View.createdAt(tasks)
+    }
+    static tags(id, tag){
+        Model.tags(id, tag)
+        View.message(`Tagged task id number "${id}" with tags: ${tag}`)
+    }
+    static filter(input){
+        let tasks = Model.filter(input)
+        View.filter(tasks)
+    }
 }
 
 module.exports = Controller
