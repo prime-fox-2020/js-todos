@@ -15,6 +15,15 @@ class View {
         console.log(`Deleted ${task} from your To-Do List.`);
     }
 
+    static taggedTask(task, tagArray) {
+        let tagStr = '';
+        for (let tag of tagArray) {
+            tagStr += String(tag) + ' ';
+
+        }
+        console.log(`Tagged task "${task}" with tag: ${tagStr}`);
+    }
+
     static commandsList() {
         console.log("$ node todo.js # Menampilkan command apa saja yang tersedia");
         console.log("$ node todo.js help # Menampilkan command apa saja yang tersedia");

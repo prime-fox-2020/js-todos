@@ -5,7 +5,7 @@ class Controller {
     static addToDoList(newTask) {
         Model.addToDoList(newTask);
     }
-    
+
     static displayToDoList() {
         const taskList = Model.readToDoList();
         View.toDoList(taskList);
@@ -24,7 +24,7 @@ class Controller {
     static completeTask(id) {
         const taskList = Model.readToDoList();
         for (let task of taskList) {
-            if (task.id == id ) {
+            if (task.id == id) {
                 task.status = 'complete';
             }
         }
@@ -36,7 +36,7 @@ class Controller {
     static uncompleteTask(id) {
         const taskList = Model.readToDoList();
         for (let task of taskList) {
-            if (task.id == id ) {
+            if (task.id == id) {
                 task.status = 'incomplete';
             }
         }
@@ -44,7 +44,7 @@ class Controller {
         View.toDoList(taskList);
     }
 
-    static sortByTime(order = 'asc'){
+    static sortByTime(order = 'asc') {
         const taskList = Model.readToDoList();
         if (order == 'asc') {
             taskList.sort((a, b) => (a.timeStamp < b.timeStamp) ? 1 : -1);
@@ -55,7 +55,7 @@ class Controller {
         Model.writeToDoList(taskList);
     }
 
-    static sortCompletedTask(order = 'asc'){
+    static sortCompletedTask(order = 'asc') {
         const taskList = Model.readToDoList();
         if (order == 'asc') {
             taskList.sort((a, b) => (a.status > b.status) ? 1 : -1);
@@ -64,6 +64,20 @@ class Controller {
         }
         View.toDoList(taskList);
         Model.writeToDoList(taskList);
+    }
+
+    static setTagToTask(id, tagArray) {
+        const taskList = Model.readToDoList();
+        let selectedTask = ''
+        for (let task of taskList) {
+            if (task.id == id) {
+                selectedTask = task.task;
+                task.tag = tagArray;
+                break;
+            }
+        }
+        Model.writeToDoList(taskList);
+        View.taggedTask(selectedTask, tagArray);
     }
 
     static showCommandsList() {

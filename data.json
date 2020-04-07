@@ -1,26 +1,57 @@
 [
   {
-    "id": 4,
-    "task": "Jual semangka",
-    "status": "incomplete",
-    "timeStamp": 1586272316467
-  },
-  {
     "id": 1,
     "task": "Lembur tugas hacktiv8",
+    "tag": [
+      "pekerjaan"
+    ],
     "status": "incomplete",
     "timeStamp": 1586270588635
   },
   {
+    "id": 2,
+    "task": "Tidur",
+    "tag": [
+      "kebutuhan",
+      "pekerjaan",
+      "hobi"
+    ],
+    "status": "complete",
+    "timeStamp": 1586270987534
+  },
+  {
     "id": 3,
     "task": "Makan lagi",
+    "tag": [],
     "status": "complete",
     "timeStamp": 1586271763191
   },
   {
-    "id": 2,
-    "task": "Tidur",
-    "status": "complete",
-    "timeStamp": 1586270987534
+    "id": 4,
+    "task": "Jual semangka",
+    "tag": [
+      "pekerjaan",
+      "kebutuhan"
+    ],
+    "status": "incomplete",
+    "timeStamp": 1586272316467
+  },
+  {
+    "id": 5,
+    "task": "Makan pisang",
+    "tag": [
+      "kebutuhan"
+    ],
+    "status": "incomplete",
+    "timeStamp": 1586272670578
+  },
+  {
+    "id": 6,
+    "task": "Olahraga",
+    "tag": [
+      "hobi"
+    ],
+    "status": "incomplete",
+    "timeStamp": 1586272749379
   }
 ]
