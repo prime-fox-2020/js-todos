@@ -33,7 +33,7 @@ class Model{
                 id: data[data.length - 1].id + 1,
                 task: newTask,
                 status: 'Incomplete'
-            })
+            });
 
             fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
                 if(err) throw err;
@@ -41,6 +41,33 @@ class Model{
 
             cb(null, newTask);
         })
+    }
+
+    static findById(id, cb){
+        this.list((err, data) => {
+            if(err){
+                cb(err, null);
+            }
+            let flag = false;
+            let result = null;
+
+            data.forEach(el => {
+                if(el.id === Number(id)){
+                    flag = true;
+                    result = el;
+                }
+            });
+
+            if(flag){
+                cb(null, result);
+            } else{
+                cb(null, true);
+            }
+        })
+    }
+
+    static delete(id, cb){
+        
     }
 }
 

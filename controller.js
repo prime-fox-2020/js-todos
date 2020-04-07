@@ -25,6 +25,19 @@ class Controller{
             View.add(data);
         })
     }
+
+    static findById(id){
+        Model.findById(id, (err, data) => {
+            if(err){
+                throw err;
+            }
+            View.findById(data)
+        })
+    }
+
+    static delete(id){
+        
+    }
 }
 
 module.exports = Controller;

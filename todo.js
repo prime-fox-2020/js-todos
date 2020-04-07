@@ -15,10 +15,10 @@ switch(command){
         Controller.add(params[0]);
         break;
     case 'findById':
-        Controller.findById(params);
+        Controller.findById(params[0]);
         break;
     case 'delete':
-        Controller.delete(params);
+        Controller.delete(params[0]);
         break;
     case 'status':
         Controller.status(params[0], params[1]);
