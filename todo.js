@@ -1,4 +1,4 @@
-const Controller = require('./controller');
+const app = require('./controller');
 
 const input = process.argv;
-Controller.getInput(input[2]);
+app.getInput(input[2], input[3]);
