@@ -30,7 +30,7 @@
     "id": 4,
     "task": "Makan pisang",
     "tag": [
-      "kebutuhan"
+      "hobi"
     ],
     "status": "complete",
     "timeStamp": 1586272670578
@@ -39,7 +39,8 @@
     "id": 5,
     "task": "Olahraga",
     "tag": [
-      "hobi"
+      "hobi",
+      "kebutuhan"
     ],
     "status": "incomplete",
     "timeStamp": 1586272749379
@@ -47,7 +48,11 @@
   {
     "id": 6,
     "task": "Ngoding",
-    "tag": [],
+    "tag": [
+      "pekerjaan",
+      "kebutuhan",
+      "hobi"
+    ],
     "status": "incomplete",
     "timeStamp": 1586276607545
   }

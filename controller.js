@@ -17,7 +17,7 @@ class Controller {
     }
 
     static deleteTask(id) {
-        const deletedTask = Model.deleteTask(id);
+        let deletedTask = Model.deleteTask(id);
         View.deletedTask(deletedTask);
     }
 
@@ -82,19 +82,6 @@ class Controller {
 
     static filterByTag(selectedTag) {
         const taskList = Model.readToDoList();
-        // for (let task = 0; task < taskList.length; task++) {
-        //     let findTag = false;
-        //     for (let tag of taskList[task].tag) {
-        //         if (tag == selectedTag) {
-        //             findTag = true;
-        //             break;
-        //         }
-        //     }
-        //     if (!findTag){
-        //         taskList.splice(task, 1);
-        //     }
-        // }
-        // View.toDoList(taskList);
         let selectedTask = [];
         for (let task of taskList) {
             for (let tag of task.tag) {

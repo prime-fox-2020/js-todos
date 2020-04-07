@@ -27,6 +27,7 @@ class Model {
 
     static deleteTask(id) {
         let taskList = this.readToDoList();
+        taskList.sort((a, b) => (a.timeStamp > b.timeStamp) ? 1 : -1);
         let deleted = '';
         let indexID = 0;
         for (let task = 0; task < taskList.length; task++) {
