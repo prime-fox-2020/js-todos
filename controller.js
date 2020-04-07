@@ -29,9 +29,13 @@ class Controller {
         let unX = Model.uncomplete(num)
         View.complete(unX)
     }
-    static sort(num){
-        let unX = Model.uncomplete(num)
-        View.complete(unX)
+    static tag(id,tags){
+        let tag = Model.tag(id,tags)
+        View.tag(tag,tags)
+    }
+    static filter(keyword){
+        let word = Model.filter(keyword)
+        View.filter(word)
     }
 }
 

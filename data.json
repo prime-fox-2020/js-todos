@@ -1,1 +1,77 @@
-[{"Id":1,"task":"Bikin aplikasi","complete":true},{"Id":2,"task":"Main Node.js","complete":true},{"Id":3,"task":"Ngoding","complete":true},{"Id":4,"task":"Makan","complete":false},{"Id":5,"task":"Tidur","complete":false},{"Id":6,"task":"Libur","complete":false},{"Id":7,"task":"Ngoding lagi","complete":true},{"Id":8,"task":"Ngoding terus","complete":true}]
+[
+   {
+      "Id": 1,
+      "task": "Bikin aplikasi",
+      "complete": true,
+      "tags": [
+         "robot"
+      ]
+   },
+   {
+      "Id": 2,
+      "task": "Main Node.js",
+      "complete": true,
+      "tags": []
+   },
+   {
+      "Id": 3,
+      "task": "Ngoding",
+      "complete": true,
+      "tags": [
+         "hobby",
+         "ngoding"
+      ]
+   },
+   {
+      "Id": 4,
+      "task": "Makan",
+      "complete": false,
+      "tags": []
+   },
+   {
+      "Id": 5,
+      "task": "Tidur",
+      "complete": false,
+      "tags": []
+   },
+   {
+      "Id": 6,
+      "task": "Libur",
+      "complete": false,
+      "tags": [
+         "robot"
+      ]
+   },
+   {
+      "Id": 7,
+      "task": "Ngoding lagi",
+      "complete": true,
+      "tags": []
+   },
+   {
+      "Id": 8,
+      "task": "Ngoding terus",
+      "complete": true,
+      "tags": [
+         "komputer"
+      ]
+   },
+   {
+      "Id": 9,
+      "task": "Ngoding gak selesai2",
+      "complete": true,
+      "tags": []
+   },
+   {
+      "Id": 10,
+      "task": "Ngoding is great",
+      "complete": true,
+      "tags": []
+   },
+   {
+      "Id": 11,
+      "task": "todo.js selesai",
+      "complete": true,
+      "tags": []
+   }
+]

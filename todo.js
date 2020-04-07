@@ -4,6 +4,7 @@ const welcome = process.argv
 let command = welcome[2].split(":")[0]
 let taskIdOrContent = welcome[3]
 let perintah = welcome[2].split(":")[1]
+let tag = welcome.slice(4)
 
 
 if(command == "help"){
@@ -24,4 +25,8 @@ if(command == "help"){
     Controller.complete(taskIdOrContent)
 }else if(command == "uncomplete"){
     Controller.uncomplete(taskIdOrContent)
+}else if(command == "tag"){
+    Controller.tag(taskIdOrContent, tag)
+}else if(command == "filter"){
+    Controller.filter(perintah)
 }

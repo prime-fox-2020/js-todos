@@ -37,6 +37,13 @@ class View{
             
         }
     }
-    
+    static tag(id,arrTag){
+        console.log(`Tagged task "${id}" with tags : ${arrTag.join(" ")}`)
+    }
+    static filter(array){
+        for (let i = 0; i < array.length; i++) {
+            console.log(`${array[i][0]}. ${array[i][1]} [${array[i][2]}]`)
+        }
+    }
 }
 module.exports = View
