@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "task_id": 1,
+    "task": "Belajar Node.js",
+    "status": false
+  },
+  {
+    "task_id": 2,
+    "task": "Maen game",
+    "status": false
+  },
+  {
+    "task_id": 3,
+    "task": "Kerjain",
+    "status": true
+  },
+  {
+    "task_id": 4,
+    "task": "Makan,lagi",
+    "status": false
+  }
+]
