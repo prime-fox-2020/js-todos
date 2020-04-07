@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "id": 1,
+    "do": "Bake a delicious peanut butter cake",
+    "complete": false,
+    "created_date": "03-31-2019"
+  },
+  {
+    "id": 2,
+    "do": "Shut down my computer",
+    "complete": true,
+    "created_date": "04-07-2020",
+    "completed_date": "04-07-2020"
+  },
+  {
+    "id": 3,
+    "do": "Change the world",
+    "complete": true,
+    "created_date": "02-29-2012",
+    "completed_date": "12-31-2018"
+  },
+  {
+    "id": 4,
+    "do": "Play with cat",
+    "complete": false,
+    "created_date": "03-02-2020",
+    "tags": "hobby pet"
+  }
+]
