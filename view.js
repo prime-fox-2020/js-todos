@@ -24,14 +24,22 @@ class View{
     }
   }
 
-  static findById(todoId){
-    if(!todoId) console.log("ToDo not Found!")
-    else console.log(`${todoId.Id}. ${todoId.todo}`);
+  static filter(todos){
+    if(!todos) console.log("ToDo not Found!")
+    else {
+      for(let todo of todos){
+        console.log(`${todo.Id}. ${todo.todo}`);
+      }
+    }
   }
 
   static delete(task){
     console.log(`Deleted "${task}" from your TODO list...`);
   }  
+  static tags(task, tags){
+    if(!task.length) console.log(`Tagged task "${task}" with tags ${tags}`);
+    else console.log(`Tagged task "${task}" with tags ${tags}`);
+  }
 }
 
 

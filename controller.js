@@ -7,8 +7,8 @@ class Controller{
     View.help();
   }
 
-  static list(){
-    let model = Model.read();
+  static list(created = 'created', list = 'asc'){
+    let model = Model.read(created, list);
     View.list(model);
   }
 
@@ -17,7 +17,8 @@ class Controller{
     todos.push({
       Id        : todos.length + 1,
       todo      : task,
-      complete  : false
+      complete  : false,
+      tags      : []
     });
     Model.add(todos);
     View.add(task);
@@ -29,7 +30,7 @@ class Controller{
     for(let todo of todos){
       if(todo.Id === Number(task)) search = todo;
     }
-    View.findById(search);
+    View.filter(search);
   }
 
   static delete(id){
@@ -52,6 +53,33 @@ class Controller{
     todos[id-1].complete = false;
     Model.update(todos);
     View.list(todos);
+  }
+
+  static tags(id, tags){
+    const todos   = Model.read();
+    let   arrTags = [];
+    for(let tag of tags){
+      if(todos[id-1].tags.indexOf(tag) === -1){
+        todos[id-1].tags.push(tag);
+        arrTags.push(tag)
+      }
+    }
+    arrTags = arrTags.join(' ');
+    View.tags(todos[id-1].todo, arrTags);
+    Model.update(todos);
+  }
+
+  static filter(tag){
+    const todos = Model.read();
+    const filter = [];
+    for(let todo of todos){
+      let check = false;
+      for(let tagged of todo.tags){
+        if(tagged === tag) check = true;
+      }
+      if(check) filter.push(todo);
+    }
+    View.filter(filter);
   }
 }
 

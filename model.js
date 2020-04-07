@@ -3,9 +3,26 @@ const data = fs.readFileSync('./data.json', 'utf8');
 // let result = JSON.parse(data);
 
 class Model {
-  static read(){
+  static read(detail = 'created', sort = 'asc'){
     const result = JSON.parse(data);
-    return result;
+    const arr = [];
+    if(detail === 'created' && sort === 'asc') return result;
+    if(detail === 'created' && sort === 'desc'){
+      for(let i = result.length-1; i >= 0; i--) arr.push(result[i]);
+      return arr;
+    }
+    if(detail === 'completed' && sort === 'asc'){
+      for(let res of result){
+        if(res.complete) arr.push(res);
+      }
+      return arr;
+    }
+    if(detail === 'completed' && sort === 'desc'){
+      for(let i = result.length-1; i >= 0; i--){
+        if(result[i].complete) arr.push(result[i]);
+      }
+      return arr;
+    }
   }
 
   static add(task){

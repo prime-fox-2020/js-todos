@@ -3,18 +3,18 @@
     "Id": 1,
     "todo": "Bikin Aplikasi",
     "complete": false,
-    "date" : "2020-04-07T14:51:42.337Z"
+    "tags": []
   },
   {
     "Id": 2,
     "todo": "Main node js",
     "complete": false,
-    "date" : "2020-04-07T14:51:57.107Z"
+    "tags": []
   },
   {
     "Id": 3,
     "todo": "Shut down my Computer",
     "complete": false,
-    "date" : "2020-04-07T14:52:08.122Z"
+    "tags": []
   }
 ]
