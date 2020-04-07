@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "1",
+    "task": "buy bread",
+    "status": "uncomplete",
+    "date": "2020-04-07T16:05:52.356Z",
+    "dateCompleted": ""
+  },
+  {
+    "id": "2",
+    "task": "do laundry",
+    "status": "uncomplete",
+    "date": "2020-04-07T16:06:00.238Z",
+    "dateCompleted": ""
+  },
+  {
+    "id": "3",
+    "task": "cook",
+    "status": "uncomplete",
+    "date": "2020-04-07T16:06:26.880Z",
+    "dateCompleted": ""
+  }
+]
