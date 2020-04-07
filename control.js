@@ -26,7 +26,13 @@ class Control {
                 for (let i in obj) {
                     if (+i > id) id = +i;
                 }
-                obj[id + 1] = ['[ ]', judul.replace('\"', '')];
+                obj[id + 1] = {
+                    status: '[ ]',
+                    name: judul.replace('\"', ''),
+                    tag: [],
+                    createDate: new Date(),
+                    completeDate: ''
+                }
                 model.updateList(obj);
                 view.updateList(judul, 'add');
                 break;
@@ -44,15 +50,41 @@ class Control {
             }
             case 'complete' : {
                 let obj = model.readList();
-                obj[command[1]][0] = '[x]';
+                obj[command[1]].status = '[x]';
+                obj[command[1]].completeDate = new Date();
                 model.updateList(obj);
                 view.printList(model.readList());
+                break;
             }
             case 'uncomplete' : {
                 let obj = model.readList();
-                obj[command[1]][0] = '[ ]';
+                obj[command[1]].status = '[ ]';
+                obj[command[1]].completeDate = '';
                 model.updateList(obj);
                 view.printList(model.readList());
+                break;
+            }
+            case 'list:created' : {
+                view.printList(model.readList(), command[1], 'create');
+                break;
+            }
+            case 'list:completed' : {
+                view.printList(model.readList(), command[1], 'complete');
+                break;
+            }
+            case 'tag' : {
+                let obj = model.readList(), tag = '';
+                for (let i = 2; i < command.length; i++){
+                    obj[command[1]].tag.push(command[i]);
+                    tag += command[i] + ' ';
+                }
+                model.updateList(obj);
+                view.updateList(obj[command[1]].name, 'tag', tag);
+                break;
+            }
+            case 'filter' : {
+                view.filter(model.readList(), command[1]);
+                break;
             }
             default : {view.default(); break}
         }
