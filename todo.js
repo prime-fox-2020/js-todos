@@ -1,6 +1,5 @@
 const Controller = require('./controller')
-// const a = process.argv
-// console.log(a)
+
 const argv = process.argv.slice(2)
 const tag = argv.slice(2).join(' ')
 
@@ -14,6 +13,7 @@ if(argv.length !== 0) {
         argv[0] = filter
         check = true
     }   
+
     switch(argv[0]) {
         case 'help' : Controller.help();break
         case 'list' : Controller.list();break
