@@ -1,9 +1,10 @@
 const fs = require('fs')
 
 class Todo{
-    constructor(task_id, task){
+    constructor(task_id, task, status){
         this.task_id = task_id
         this.task = task
+        this.status = status
     }
 
     static list() {
@@ -14,24 +15,11 @@ class Todo{
         for(let i=0; i<parsData.length; i++) {
             result.push(new Todo(
                 parsData[i].task_id,
-                parsData[i].task))
+                parsData[i].task,
+                parsData[i].status))
         }
         //console.log(result)
         return result
-    }
-
-    static add(datas) {
-        let listData = this.list
-        let newId = listData[listData.length-1].task_id+1
-
-        let addData = []
-
-        for(let i=0; i<listData.length; i++){
-            let obj = {}
-        }
-    
-
-        fs.writeFileSync('./data.json', JSON.stringify(addData, null, 4))
     }
 
     static findByid(id) {
@@ -43,6 +31,49 @@ class Todo{
             }
         }
     }
+
+    static delete(id) {
+        let listData = this.list()
+        let deleteData = []
+        for(let i=0; i<listData.length; i++){
+            if(Number(id) !== listData[i].task_id) {
+                deleteData.push(listData[i])
+            }
+        }
+
+        fs.writeFileSync('./data.json', JSON.stringify(deleteData, null, 4))
+        return deleteData
+    }
+
+    static complete(id) {
+        let listData = this.list()
+
+        listData[Number(id)-1].status = true
+
+        fs.writeFileSync('./data.json', JSON.stringify(listData, null, 4))
+    }
+
+    static uncomplete(id) {
+        let listData = this.list()
+
+        listData[Number(id)-1].status = false
+
+        fs.writeFileSync('./data.json', JSON.stringify(listData, null, 4))
+    }
+
+    static add(datas) {
+        let listData = this.list()
+        
+        let addObj = {
+            "task_id" : listData[listData.length -1].task_id + 1,
+            "task" : datas,
+            "status" : false
+        }
+        listData.push(new Todo(addObj.task_id, addObj.task, addObj.status))
+        fs.writeFileSync('./data.json', JSON.stringify(listData, null, 2))
+        return listData
+    }
+
 }
 
 module.exports = Todo

@@ -1,18 +1,22 @@
 [
     {
         "task_id" : 1, 
-        "task" : "todo #" 
+        "task" : "todo #" ,
+        "status" : false
     },
     {
         "task_id" : 2, 
-        "task" : "todo help" 
+        "task" : "todo help",
+        "status" : false
     },
     {
         "task_id" : 3, 
-        "task" : "todo list" 
+        "task" : "todo list",
+        "status" : false
     },
     {
         "task_id" : 4, 
-        "task" : "todo add" 
+        "task" : "todo add",
+        "status" : false
     }
-]
+  ]

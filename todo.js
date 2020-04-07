@@ -12,11 +12,22 @@ switch(command) {
     case 'list':
         Controller.list()
         break
-    // case 'add':
-    //     Controller.add(datas)
-    //     break;
-
     case 'findById':
         Controller.findById(datas)
         break
+    case 'delete':
+        Controller.delete(datas)
+        break
+    case 'complete':
+        Controller.complete(datas)
+        break
+    case 'uncomplete':
+        Controller.uncomplete(datas)
+        break;
+    case 'add':
+        Controller.add(datas)
+        break
+    // default:
+    //     Controller.msg()
+    //     break
 }
