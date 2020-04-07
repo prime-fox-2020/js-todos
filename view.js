@@ -8,13 +8,26 @@ class View {
     }
 
     static printList(obj) {
-        for (let i in obj){
-            console.log(`${i}. ${obj[i]}`);
+        for (let i in obj) {
+            console.log(`${i}. ${obj[i][0]} ${obj[i][1]}`);
         }
     }
 
-    static addList(name) {
-        console.log(`Added \"${name}\" to Your TODO list`);
+    static updateList(name, task) {
+        switch (task) {
+            case 'add' : {
+                console.log(`Added \"${name}\" to Your TODO list`);
+                break;
+            } 
+            case 'del' : {
+                console.log(`Deleted \"${name}\" from Your TODO list`);
+                break;
+            } 
+        }
+    }
+
+    static find(obj, id) {
+        console.log(`${id}. ${obj[id][0]} ${obj[id][1]}`);
     }
 
     static default() {

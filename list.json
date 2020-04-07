@@ -1,5 +1,14 @@
 {
-    "1": "Bikin Aplikasi",
-    "2": "Main node js",
-    "3": "Shut down my computer"
+    "1": [
+        "[ ]",
+        "Bikin Aplikasi"
+    ],
+    "2": [
+        "[x]",
+        "Main node js"
+    ],
+    "3": [
+        "[x]",
+        "Selesaikan Release 1"
+    ]
 }

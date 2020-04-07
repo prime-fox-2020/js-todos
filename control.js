@@ -26,10 +26,33 @@ class Control {
                 for (let i in obj) {
                     if (+i > id) id = +i;
                 }
-                obj[id + 1] = judul.replace('\"', '');
-                model.addList(obj);
-                view.addList(judul);
+                obj[id + 1] = ['[ ]', judul.replace('\"', '')];
+                model.updateList(obj);
+                view.updateList(judul, 'add');
                 break;
+            }
+            case 'findById' : {
+                view.find(model.readList(), command[1]);
+                break;
+            }
+            case 'delete' : {
+                let obj = model.readList(), judul = obj[command[1]][1];
+                delete obj[command[1]];
+                model.updateList(obj);
+                view.updateList(judul, 'del');
+                break;
+            }
+            case 'complete' : {
+                let obj = model.readList();
+                obj[command[1]][0] = '[x]';
+                model.updateList(obj);
+                view.printList(model.readList());
+            }
+            case 'uncomplete' : {
+                let obj = model.readList();
+                obj[command[1]][0] = '[ ]';
+                model.updateList(obj);
+                view.printList(model.readList());
             }
             default : {view.default(); break}
         }

@@ -11,7 +11,7 @@ class Model {
         return JSON.parse(fs.readFileSync('./list.json', 'utf8'));
     }
 
-    static addList(obj) {
+    static updateList(obj) {
         fs.writeFileSync('./list.json', JSON.stringify(obj, null, 4));
     }
 }
