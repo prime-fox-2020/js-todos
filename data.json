@@ -1,1 +1,56 @@
-[]
+[
+   {
+      "id": 4,
+      "task": "Membuat cookies",
+      "status": "[X]",
+      "created_date": "2020-04-07T14:15:00.174Z",
+      "completed_date": "2020-04-07T14:19:13.877Z",
+      "tag": []
+   },
+   {
+      "id": 5,
+      "task": "Berkebun",
+      "status": "[X]",
+      "created_date": "2020-04-01T14:10:41.777Z",
+      "completed_date": "2020-04-07T14:19:17.193Z",
+      "tag": []
+   },
+   {
+      "id": 6,
+      "task": "Ngoding",
+      "status": "[X]",
+      "created_date": "2020-04-07T14:18:02.235Z",
+      "completed_date": "2020-04-07T14:19:22.913Z",
+      "tag": []
+   },
+   {
+      "id": 7,
+      "task": "Bermain ps",
+      "status": "[ ]",
+      "created_date": "2020-04-02T14:05:13.586Z",
+      "completed_date": "",
+      "tag": [
+         "hobby",
+         "game"
+      ]
+   },
+   {
+      "id": 8,
+      "task": "Tidur malam",
+      "status": "[ ]",
+      "created_date": "2020-04-07T15:32:27.795Z",
+      "completed_date": "",
+      "tag": [
+         "mimpi",
+         "malas"
+      ]
+   },
+   {
+      "id": 9,
+      "task": "Bersihin kamar",
+      "status": "[ ]",
+      "created_date": "2020-04-07T15:37:11.577Z",
+      "completed_date": "",
+      "tag": []
+   }
+]
