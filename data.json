@@ -1,1 +1,34 @@
-[]
+[
+    {
+        "id": 1,
+        "status": "[ ]",
+        "task": "Bikin aplikasi",
+        "created_date": "02-03-2020",
+        "completed_date": "",
+        "tag": "coding"
+    },
+    {
+        "id": 2,
+        "status": "[X]",
+        "task": "Main node js",
+        "created_date": "05-03-2020",
+        "completed_date": "08-03-2020",
+        "tag": "hobby pet"
+    },
+    {
+        "id": 3,
+        "status": "[X]",
+        "task": "Shutdown my computer",
+        "created_date": "01-03-2020",
+        "completed_date": "07-03-2020",
+        "tag": ""
+    },
+    {
+        "id": 4,
+        "status": "[ ]",
+        "task": "Kerjakan challenge",
+        "created_date": "06-03-2020",
+        "completed_date": "",
+        "tag": "hobby"
+    }
+]
