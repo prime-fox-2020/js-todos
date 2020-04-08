@@ -1,0 +1,18 @@
+
+TO-DO Usage : node To-Do <command>
+
+[command]
+- help # Menampilkan Command apa saja yang tersedia
+- list # Menampilkan Daftar To-Do List
+- list:completed asc|desc # Menampilakan list To-Do yang sudah ditandai selesai secara berurut waktu penyelesaian
+- list:outstanding asc|desc # Menampilakan list To-Do yang belum ditandai selesai secara berurut waktu pembuatan
+- list:created asc|desc # Menampilakan list To-Do secara berurut waktu pembuatan
+- add <task_content> # Menambahkan task kedalam list To-Do
+- findById <task_id> # Menampilakan satu task sesuai dengan task_id dalam list To-Do
+- delete <task_id> # Menghapus To-Do sesuai dengan task_id
+- complete <task_id> # Menandai status task dengan task_id selesai
+- uncomplete <task_id> # Menghilangkan tanda selesai task dengan task_id
+- tag <task_id> <tag_name_1> <tag_name_2> <tag_name_3> ... # Menambahkan tag kepada task dengan task_id
+- filter:<tag_name> # Menampilkan list To-Do dengan tag tag_name
+
+

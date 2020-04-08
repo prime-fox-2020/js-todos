@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "_task_id": 1,
+    "_task": "Laundry",
+    "_complete": true,
+    "_tag": [],
+    "_createdAt": "2020-04-07T07:18:33.078Z",
+    "_completedAt": "2020-04-07T07:19:26.858Z"
+  }
+]
