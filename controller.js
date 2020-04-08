@@ -52,7 +52,7 @@ class Controller {
             taskList.sort((a, b) => (a.timeStamp > b.timeStamp) ? 1 : -1);
         }
         View.toDoList(taskList);
-        Model.writeToDoList(taskList);
+        // Model.writeToDoList(taskList);
     }
 
     static sortCompletedTask(order = 'asc') {
@@ -63,7 +63,7 @@ class Controller {
             taskList.sort((a, b) => (a.status < b.status) ? 1 : -1);
         }
         View.toDoList(taskList);
-        Model.writeToDoList(taskList);
+        // Model.writeToDoList(taskList);
     }
 
     static setTagToTask(id, tagArray) {
