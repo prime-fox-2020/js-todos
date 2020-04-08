@@ -1,0 +1,11 @@
+help --> Melihat daftar command
+list --> Melihat daftar TODO
+add <task_content> --> Menambahkan TODO ke dalam list
+findById <task_id> --> Melihat detail TODO sesuai 'task_id' nya
+delete <task_id> --> Menghapus TODO sesuai 'task_id' nya
+complete <task_id> --> Menandai status TODO selesai
+uncomplete <task_id> --> Menandai status TODO belum selesai
+list:created asc|desc
+list:complete asc|desc
+tag <task_id> <tag_name_1> <tag_name_2> ... <tag_name_N>
+filter <tag_name>

@@ -1,0 +1,43 @@
+{
+    "1": {
+        "status": "[x]",
+        "name": "Bikin Aplikasi",
+        "tag": [],
+        "createDate": "2020-04-07T18:02:49.741Z",
+        "completeDate": "2020-04-07T18:02:49.741Z"
+    },
+    "2": {
+        "status": "[x]",
+        "name": "Selesaikan Release 2",
+        "tag": [
+            "sort",
+            "tag",
+            "filter"
+        ],
+        "createDate": "2020-04-07T19:22:55.371Z",
+        "completeDate": "2020-04-07T19:48:21.103Z"
+    },
+    "3": {
+        "status": "[x]",
+        "name": "Selesaikan Release 1",
+        "tag": [
+            "list",
+            "add",
+            "delete",
+            "complete",
+            "uncomplete"
+        ],
+        "createDate": "2020-04-07T19:23:03.550Z",
+        "completeDate": "2020-04-07T19:48:16.313Z"
+    },
+    "4": {
+        "status": "[x]",
+        "name": "Selesaikan Release 0",
+        "tag": [
+            "list",
+            "help"
+        ],
+        "createDate": "2020-04-07T19:23:06.943Z",
+        "completeDate": "2020-04-07T19:48:13.606Z"
+    }
+}
