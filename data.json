@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "Basuh tangan",
+    "status": "[ ]"
+  },
+  {
+    "id": 2,
+    "task": "Gogok gigi",
+    "status": "[ ]"
+  },
+  {
+    "id": 3,
+    "task": "Evasluasi",
+    "status": "[ ]"
+  },
+  {
+    "id": 4,
+    "task": "Tidur",
+    "status": "[x]"
+  }
+]
