@@ -1,1 +1,59 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "Lembur tugas hacktiv8",
+    "tag": [
+      "pekerjaan"
+    ],
+    "status": "complete",
+    "timeStamp": 1586270588635
+  },
+  {
+    "id": 2,
+    "task": "Tidur",
+    "tag": [
+      "kebutuhan"
+    ],
+    "status": "incomplete",
+    "timeStamp": 1586270987534
+  },
+  {
+    "id": 3,
+    "task": "Makan lagi",
+    "tag": [
+      "hobi"
+    ],
+    "status": "complete",
+    "timeStamp": 1586271763191
+  },
+  {
+    "id": 4,
+    "task": "Makan pisang",
+    "tag": [
+      "hobi"
+    ],
+    "status": "complete",
+    "timeStamp": 1586272670578
+  },
+  {
+    "id": 5,
+    "task": "Olahraga",
+    "tag": [
+      "hobi",
+      "kebutuhan"
+    ],
+    "status": "incomplete",
+    "timeStamp": 1586272749379
+  },
+  {
+    "id": 6,
+    "task": "Ngoding",
+    "tag": [
+      "pekerjaan",
+      "kebutuhan",
+      "hobi"
+    ],
+    "status": "incomplete",
+    "timeStamp": 1586276607545
+  }
+]
