@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "Id": 1,
+    "todo": "Bikin Aplikasi",
+    "complete": false,
+    "tags": []
+  },
+  {
+    "Id": 2,
+    "todo": "Main node js",
+    "complete": false,
+    "tags": []
+  },
+  {
+    "Id": 3,
+    "todo": "Shut down my Computer",
+    "complete": false,
+    "tags": []
+  }
+]
