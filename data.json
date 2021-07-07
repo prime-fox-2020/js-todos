@@ -1,1 +1,37 @@
-[]
+[
+    {
+        "id": 1,
+        "input": "youtuban",
+        "status": true
+    },
+    {
+        "id": 2,
+        "input": "ngoding",
+        "status": true
+    },
+    {
+        "id": 3,
+        "input": "makan",
+        "status": false
+    },
+    {
+        "id": 4,
+        "input": "rokok",
+        "status": true
+    },
+    {
+        "id": 5,
+        "input": "nge-bucin",
+        "status": true
+    },
+    {
+        "id": 6,
+        "input": "ngopi",
+        "status": true
+    },
+    {
+        "id": 7,
+        "input": "nge-zoom",
+        "status": true
+    }
+]
